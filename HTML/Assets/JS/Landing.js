@@ -19,11 +19,15 @@ let previouslyFocusedElement = null;
 const particleCanvas = document.getElementById("hero-particles");
 const particleContext = particleCanvas.getContext("2d");
 const reduceParticleMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+const particleHero = document.querySelector(".hero");
 let particles = [];
+let cursorParticles = [];
 let particleFrame = 0;
 let particleWidth = 0;
 let particleHeight = 0;
 let lastParticleFrame = 0;
+let lastCursorBurst = 0;
+let lastCursorPosition = null;
 
 function createParticles() {
   const width = particleWidth;
@@ -105,12 +109,81 @@ function drawParticles(time = 0) {
     particleContext.fillStyle = `rgba(235, 133, 63, ${pulse})`;
     particleContext.fill();
   });
+  cursorParticles = cursorParticles.filter((particle) => {
+    const progress = (time - particle.bornAt) / particle.lifetime;
+    if (progress >= 1) {
+      return false;
+    }
+
+    const fade = (1 - progress) ** 1.4;
+    const pop = Math.min(1, progress * 9);
+    particleContext.beginPath();
+    particleContext.arc(
+      particle.x + particle.velocityX * (time - particle.bornAt),
+      particle.y + particle.velocityY * (time - particle.bornAt),
+      particle.radius * (0.35 + pop * 0.65),
+      0,
+      Math.PI * 2,
+    );
+    particleContext.fillStyle = `rgba(235, 133, 63, ${fade * 0.78})`;
+    particleContext.fill();
+    return true;
+  });
   particleContext.shadowBlur = 0;
 
   if (!reduceParticleMotion.matches && document.visibilityState === "visible") {
     particleFrame = window.requestAnimationFrame(drawParticles);
   }
 }
+
+function popParticlesAtCursor(event) {
+  if (
+    reduceParticleMotion.matches ||
+    event.pointerType === "touch" ||
+    event.target.closest(".hero-copy, .competition-card, .organizer-strip")
+  ) {
+    lastCursorPosition = null;
+    return;
+  }
+
+  const bounds = particleCanvas.getBoundingClientRect();
+  const position = {
+    x: event.clientX - bounds.left,
+    y: event.clientY - bounds.top,
+  };
+  const now = performance.now();
+  const distance = lastCursorPosition
+    ? Math.hypot(position.x - lastCursorPosition.x, position.y - lastCursorPosition.y)
+    : Infinity;
+
+  if (distance < 22 || now - lastCursorBurst < 65) {
+    return;
+  }
+
+  lastCursorPosition = position;
+  lastCursorBurst = now;
+  for (let index = 0; index < 9; index += 1) {
+    const angle = (Math.PI * 2 * index) / 9 + Math.random() * 0.32;
+    const speed = 0.025 + Math.random() * 0.035;
+    cursorParticles.push({
+      x: position.x,
+      y: position.y,
+      velocityX: Math.cos(angle) * speed,
+      velocityY: Math.sin(angle) * speed,
+      radius: 1.2 + Math.random() * 1.2,
+      bornAt: now,
+      lifetime: 650 + Math.random() * 250,
+    });
+  }
+  if (cursorParticles.length > 126) {
+    cursorParticles.splice(0, cursorParticles.length - 126);
+  }
+}
+
+particleHero.addEventListener("pointermove", popParticlesAtCursor);
+particleHero.addEventListener("pointerleave", () => {
+  lastCursorPosition = null;
+});
 
 function resizeParticleCanvas() {
   const bounds = particleCanvas.getBoundingClientRect();
