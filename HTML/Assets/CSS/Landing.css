@@ -86,6 +86,10 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline: 3px solid 
 .button-large { min-height: 48px; padding-inline: 20px; }
 .button-secondary { border-color: #d7dbe3; background: rgba(255, 255, 255, 0.68); color: #363a43; }
 .button-secondary:hover { border-color: #b6bdc9; background: #fff; }
+.demo-link { display: inline-flex; align-items: center; gap: 7px; margin-top: 16px; color: #555b65; font-size: 11px; font-weight: 600; transition: color 150ms ease; }
+.demo-link span { color: var(--indigo); font-size: 16px; transition: transform 150ms ease; }
+.demo-link:hover { color: var(--indigo); }
+.demo-link:hover span { transform: translateX(3px); }
 .menu-toggle, .mobile-nav { display: none; }
 
 .hero {
@@ -378,6 +382,7 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline: 3px solid 
   .eyebrow { font-size: 9px; }
   .hero-description { font-size: 12px; }
   .button-large { font-size: 9px; }
+  .demo-link { margin-top: 14px; font-size: 12px; }
   .art-caption { font-size: 9px; }
   .art-index { font-size: 8px; }
   .card-copy h2 { min-height: 42px; font-size: 12px; }
