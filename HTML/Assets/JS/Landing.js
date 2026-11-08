@@ -22,6 +22,7 @@ const reduceParticleMotion = window.matchMedia("(prefers-reduced-motion: reduce)
 const particleHero = document.querySelector(".hero");
 let particles = [];
 let cursorParticles = [];
+let cursorBursts = [];
 let particleFrame = 0;
 let particleWidth = 0;
 let particleHeight = 0;
@@ -115,18 +116,31 @@ function drawParticles(time = 0) {
       return false;
     }
 
-    const fade = (1 - progress) ** 1.4;
-    const pop = Math.min(1, progress * 9);
+    const fade = (1 - progress) ** 1.15;
+    const pop = Math.sin(Math.min(1, progress * 5) * Math.PI * 0.5);
     particleContext.beginPath();
     particleContext.arc(
       particle.x + particle.velocityX * (time - particle.bornAt),
       particle.y + particle.velocityY * (time - particle.bornAt),
-      particle.radius * (0.35 + pop * 0.65),
+      particle.radius * (0.8 + pop * 0.55),
       0,
       Math.PI * 2,
     );
-    particleContext.fillStyle = `rgba(235, 133, 63, ${fade * 0.78})`;
+    particleContext.fillStyle = `rgba(235, 133, 63, ${fade * 0.92})`;
     particleContext.fill();
+    return true;
+  });
+  cursorBursts = cursorBursts.filter((burst) => {
+    const progress = (time - burst.bornAt) / burst.lifetime;
+    if (progress >= 1) {
+      return false;
+    }
+
+    particleContext.beginPath();
+    particleContext.arc(burst.x, burst.y, 4 + progress * 30, 0, Math.PI * 2);
+    particleContext.strokeStyle = `rgba(235, 133, 63, ${(1 - progress) * 0.72})`;
+    particleContext.lineWidth = 1.6 * (1 - progress);
+    particleContext.stroke();
     return true;
   });
   particleContext.shadowBlur = 0;
@@ -156,27 +170,32 @@ function popParticlesAtCursor(event) {
     ? Math.hypot(position.x - lastCursorPosition.x, position.y - lastCursorPosition.y)
     : Infinity;
 
-  if (distance < 22 || now - lastCursorBurst < 65) {
+  if (distance < 14 || now - lastCursorBurst < 45) {
     return;
   }
 
   lastCursorPosition = position;
   lastCursorBurst = now;
-  for (let index = 0; index < 9; index += 1) {
-    const angle = (Math.PI * 2 * index) / 9 + Math.random() * 0.32;
-    const speed = 0.025 + Math.random() * 0.035;
+  cursorBursts.push({ x: position.x, y: position.y, bornAt: now, lifetime: 620 });
+  if (cursorBursts.length > 8) {
+    cursorBursts.shift();
+  }
+  for (let index = 0; index < 16; index += 1) {
+    const angle = (Math.PI * 2 * index) / 16 + Math.random() * 0.24;
+    const speed = 0.045 + Math.random() * 0.045;
+    const startRadius = 3 + Math.random() * 12;
     cursorParticles.push({
-      x: position.x,
-      y: position.y,
+      x: position.x + Math.cos(angle) * startRadius,
+      y: position.y + Math.sin(angle) * startRadius,
       velocityX: Math.cos(angle) * speed,
       velocityY: Math.sin(angle) * speed,
-      radius: 1.2 + Math.random() * 1.2,
+      radius: 1.8 + Math.random() * 1.5,
       bornAt: now,
-      lifetime: 650 + Math.random() * 250,
+      lifetime: 800 + Math.random() * 350,
     });
   }
-  if (cursorParticles.length > 126) {
-    cursorParticles.splice(0, cursorParticles.length - 126);
+  if (cursorParticles.length > 192) {
+    cursorParticles.splice(0, cursorParticles.length - 192);
   }
 }
 
