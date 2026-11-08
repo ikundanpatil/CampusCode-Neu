@@ -8146,10 +8146,10 @@ main {
 }
 /* Unified CampusCode typography system */
 :root {
-  --type-page-title: 30px;
-  --type-section-title: 21px;
-  --type-card-title: 17px;
-  --type-body: 14px;
+  --type-page-title: 36px;
+  --type-section-title: 24px;
+  --type-card-title: 18px;
+  --type-body: 15px;
   --type-nav: 14px;
   --type-button: 14px;
   --type-secondary: 13px;
@@ -8251,7 +8251,7 @@ body {
 .arena-hero-copy h1,
 .arena-subpage-intro h1,
 .profile-identity h1 {
-  font-size: clamp(26px, 2.5vw, var(--type-page-title));
+  font-size: clamp(30px, 2.5vw, var(--type-page-title));
   font-weight: 700;
   line-height: 1.12;
   letter-spacing: -1.2px;
@@ -8456,9 +8456,9 @@ body {
 
 @media (max-width: 760px) {
   :root {
-    --type-page-title: 28px;
-    --type-section-title: 20px;
-    --type-card-title: 16px;
+    --type-page-title: 30px;
+    --type-section-title: 21px;
+    --type-card-title: 17px;
     --type-body: 14px;
     --type-nav: 14px;
     --type-button: 14px;
@@ -8469,4 +8469,22 @@ body {
   .page-copy strong {
     font-size: 15px;
   }
+}
+
+/* Keep page introductions and profile copy aligned with the shared type scale. */
+.events-intro > div:first-child > p,
+.my-events-intro > div:first-child > p,
+.communication-intro > div:first-child > p,
+.profile-identity > p,
+.arena-hero-copy > p {
+  font-size: var(--type-body);
+  line-height: 1.6;
+}
+
+.profile-identity > strong {
+  font-size: var(--type-meta);
+}
+
+.profile-education span {
+  font-size: var(--type-secondary);
 }
