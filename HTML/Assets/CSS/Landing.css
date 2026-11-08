@@ -1760,7 +1760,7 @@ input:focus-visible {
     font-size: 10px;
   }
   .auth-aside-footer {
-    font-size: 7px;
+    font-size: 8px;
   }
   .auth-mode-label {
     font-size: 8px;
@@ -1874,7 +1874,7 @@ input:focus-visible {
   padding-top: 32px;
 }
 .auth-kicker {
-  font-size: 10px;
+  font-size: 11px;
 }
 .auth-kicker > span {
   width: 8px;
@@ -1907,14 +1907,14 @@ input:focus-visible {
   height: 104px;
 }
 .illustration-card > b {
-  font-size: 9px;
+  font-size: 10px;
 }
 .illustration-person {
   width: 30px;
   height: 56px;
 }
 .auth-aside-footer {
-  font-size: 9px;
+  font-size: 10px;
 }
 .auth-main {
   min-height: 0;
@@ -1926,7 +1926,7 @@ input:focus-visible {
 }
 .auth-mode-label {
   margin-bottom: 10px;
-  font-size: 11px;
+  font-size: 12px;
 }
 .auth-heading h3 {
   margin-bottom: 9px;
@@ -1934,7 +1934,7 @@ input:focus-visible {
   letter-spacing: -1.3px;
 }
 .auth-heading > p:last-child {
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.65;
 }
 .auth-form {
@@ -1945,16 +1945,16 @@ input:focus-visible {
 }
 .form-field label,
 .field-label-row label {
-  font-size: 13px;
+  font-size: 14px;
 }
 .forgot-link,
 .password-toggle {
-  font-size: 12px;
+  font-size: 13px;
 }
 .form-field input {
-  height: 48px;
-  padding-inline: 13px;
-  font-size: 13px;
+  height: 50px;
+  padding-inline: 14px;
+  font-size: 14px;
 }
 .password-control input {
   padding-right: 64px;
@@ -1963,19 +1963,19 @@ input:focus-visible {
   right: 12px;
 }
 .auth-submit {
-  min-height: 50px;
-  font-size: 13px;
+  min-height: 52px;
+  font-size: 15px;
 }
 .auth-notice {
-  font-size: 12px;
+  font-size: 13px;
 }
 .auth-divider {
   margin-block: 18px 13px;
-  font-size: 10px;
+  font-size: 11px;
 }
 .social-button {
-  min-height: 46px;
-  font-size: 12px;
+  min-height: 48px;
+  font-size: 14px;
 }
 .github-mark {
   width: 18px;
@@ -1984,11 +1984,11 @@ input:focus-visible {
 }
 .auth-switch {
   margin-top: 17px;
-  font-size: 12px;
+  font-size: 13px;
 }
 .auth-legal {
   margin-top: 13px;
-  font-size: 10px;
+  font-size: 11px;
 }
 @keyframes auth-panel-enter {
   from {
@@ -2037,7 +2037,7 @@ input:focus-visible {
     padding-top: 13px;
   }
   .auth-kicker {
-    font-size: 9px;
+    font-size: 10px;
   }
   .auth-aside-copy h2 {
     margin: 9px 0 6px;
@@ -2047,7 +2047,7 @@ input:focus-visible {
   .auth-aside-copy > p:last-child {
     display: block;
     max-width: 270px;
-    font-size: 11px;
+    font-size: 12px;
     line-height: 1.5;
   }
   .auth-illustration {
@@ -2062,7 +2062,7 @@ input:focus-visible {
   }
   .auth-aside-footer {
     margin-top: 10px;
-    font-size: 8px;
+    font-size: 9px;
   }
   .auth-main {
     min-height: 0;
@@ -2074,47 +2074,47 @@ input:focus-visible {
   }
   .auth-mode-label {
     margin-bottom: 7px;
-    font-size: 10px;
+    font-size: 11px;
   }
   .auth-heading h3 {
     font-size: 24px;
   }
   .auth-heading > p:last-child {
-    font-size: 13px;
+    font-size: 14px;
   }
   .auth-form {
     gap: 12px;
   }
   .form-field label,
   .field-label-row label {
-    font-size: 12px;
+    font-size: 13px;
   }
   .forgot-link,
   .password-toggle {
-    font-size: 11px;
+    font-size: 12px;
   }
   .form-field input {
-    height: 46px;
-    font-size: 13px;
+    height: 48px;
+    font-size: 14px;
   }
   .auth-submit {
-    min-height: 48px;
-    font-size: 12px;
+    min-height: 50px;
+    font-size: 14px;
   }
   .social-button {
-    min-height: 44px;
-    font-size: 12px;
+    min-height: 46px;
+    font-size: 13px;
   }
   .auth-divider {
     margin-block: 14px 11px;
   }
   .auth-switch {
     margin-top: 13px;
-    font-size: 11px;
+    font-size: 12px;
   }
   .auth-legal {
     margin-top: 10px;
-    font-size: 9px;
+    font-size: 10px;
   }
 }
 @media (max-width: 420px) {
@@ -2127,7 +2127,7 @@ input:focus-visible {
   }
   .auth-aside-copy > p:last-child {
     max-width: 205px;
-    font-size: 10px;
+    font-size: 11px;
   }
   .auth-illustration {
     right: 9px;
