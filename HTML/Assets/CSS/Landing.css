@@ -362,30 +362,40 @@ input:focus-visible {
 }
 .card-ai {
   --angle: -5deg;
+  --fan-x: 200%;
+  --fan-turn: -15deg;
   --delay: -0.9s;
   --enter-delay: 440ms;
   margin-top: 37px;
 }
 .card-hackathon {
   --angle: 3deg;
+  --fan-x: 100%;
+  --fan-turn: 11deg;
   --delay: -2.1s;
   --enter-delay: 560ms;
   margin-top: -26px;
 }
 .card-startup {
   --angle: -1.5deg;
+  --fan-x: 0%;
+  --fan-turn: -8deg;
   --delay: -3.4s;
   --enter-delay: 680ms;
   margin-top: 19px;
 }
 .card-arena {
   --angle: 4.5deg;
+  --fan-x: -100%;
+  --fan-turn: 13deg;
   --delay: -1.6s;
   --enter-delay: 800ms;
   margin-top: -28px;
 }
 .card-design {
   --angle: -4deg;
+  --fan-x: -200%;
+  --fan-turn: -12deg;
   --delay: -2.8s;
   --enter-delay: 920ms;
   margin-top: 32px;
@@ -672,10 +682,12 @@ input:focus-visible {
   from {
     opacity: 0;
     filter: blur(7px);
+    transform: translate3d(var(--fan-x), 0, 0) rotate(var(--fan-turn)) scale(0.72);
   }
   to {
     opacity: 1;
     filter: blur(0);
+    transform: rotate(var(--angle));
   }
 }
 @keyframes card-float {
