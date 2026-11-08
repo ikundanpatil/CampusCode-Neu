@@ -1,6 +1,6 @@
 :root {
   color-scheme: light;
-  --page: #f4f5f7;
+  --page: #faf8f2;
   --white: #ffffff;
   --ink: #0d0e11;
   --muted: #6f737b;
@@ -40,7 +40,7 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline: 3px solid 
   z-index: 20;
   top: 0;
   border-bottom: 1px solid rgba(226, 229, 234, 0.8);
-  background: rgba(244, 245, 247, 0.91);
+  background: rgba(250, 248, 242, 0.92);
   backdrop-filter: blur(18px);
 }
 
