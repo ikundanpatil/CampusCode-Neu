@@ -30,14 +30,14 @@ function createParticles() {
   const height = particleHeight;
   const spacing = width < 720 ? 12 : 10;
   const clusters = [
-    { x: 0.04, y: 0.14, rx: 0.085, ry: 0.12 },
-    { x: 0.27, y: 0.24, rx: 0.07, ry: 0.1 },
-    { x: 0.52, y: 0.12, rx: 0.08, ry: 0.11 },
-    { x: 0.9, y: 0.19, rx: 0.085, ry: 0.13 },
-    { x: 0.08, y: 0.62, rx: 0.08, ry: 0.12 },
-    { x: 0.91, y: 0.64, rx: 0.08, ry: 0.12 },
-    { x: 0.3, y: 0.88, rx: 0.07, ry: 0.08 },
-    { x: 0.72, y: 0.88, rx: 0.075, ry: 0.08 },
+    { x: 0.025, y: 0.16, rx: 0.07, ry: 0.11 },
+    { x: 0.975, y: 0.19, rx: 0.07, ry: 0.12 },
+    { x: 0.025, y: 0.45, rx: 0.07, ry: 0.12 },
+    { x: 0.975, y: 0.49, rx: 0.07, ry: 0.12 },
+    { x: 0.07, y: 0.84, rx: 0.075, ry: 0.09 },
+    { x: 0.93, y: 0.86, rx: 0.075, ry: 0.09 },
+    { x: 0.3, y: 0.96, rx: 0.07, ry: 0.07 },
+    { x: 0.72, y: 0.96, rx: 0.075, ry: 0.07 },
   ];
   let seed = 41;
   const random = () => {
@@ -65,9 +65,11 @@ function createParticles() {
         particles.push({
           x: centerX + x + (random() - 0.5) * 2,
           y: centerY + y + (random() - 0.5) * 2,
-          radius: 1 + random() * 0.7,
+          radius: 2 + random() * 1.1,
           phase: random() * Math.PI * 2,
-          drift: 1.5 + random() * 3.5,
+          driftX: 9 + random() * 15,
+          driftY: 7 + random() * 13,
+          speed: 0.0007 + random() * 0.0006,
           cluster: clusterIndex,
         });
       }
@@ -83,16 +85,19 @@ function drawParticles(time = 0) {
   lastParticleFrame = time;
   particleContext.clearRect(0, 0, particleWidth, particleHeight);
   particles.forEach((particle) => {
-    const drift = reduceParticleMotion.matches
+    const driftX = reduceParticleMotion.matches
       ? 0
-      : Math.sin(time * 0.00045 + particle.phase) * particle.drift;
+      : Math.sin(time * particle.speed + particle.phase) * particle.driftX;
+    const driftY = reduceParticleMotion.matches
+      ? 0
+      : Math.cos(time * particle.speed * 0.8 + particle.phase) * particle.driftY;
     const pulse = reduceParticleMotion.matches
       ? 0.38
-      : 0.27 + (Math.sin(time * 0.0012 + particle.phase) + 1) * 0.14;
+      : 0.36 + (Math.sin(time * 0.0012 + particle.phase) + 1) * 0.13;
     particleContext.beginPath();
     particleContext.arc(
-      particle.x + drift,
-      particle.y + Math.cos(time * 0.0004 + particle.cluster) * 2,
+      particle.x + driftX,
+      particle.y + driftY,
       particle.radius,
       0,
       Math.PI * 2,
