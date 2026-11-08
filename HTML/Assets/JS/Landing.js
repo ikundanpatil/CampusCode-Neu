@@ -30,14 +30,12 @@ function createParticles() {
   const height = particleHeight;
   const spacing = width < 720 ? 12 : 10;
   const clusters = [
-    { x: 0.025, y: 0.16, rx: 0.07, ry: 0.11 },
-    { x: 0.975, y: 0.19, rx: 0.07, ry: 0.12 },
-    { x: 0.025, y: 0.45, rx: 0.07, ry: 0.12 },
-    { x: 0.975, y: 0.49, rx: 0.07, ry: 0.12 },
-    { x: 0.07, y: 0.84, rx: 0.075, ry: 0.09 },
-    { x: 0.93, y: 0.86, rx: 0.075, ry: 0.09 },
-    { x: 0.3, y: 0.96, rx: 0.07, ry: 0.07 },
-    { x: 0.72, y: 0.96, rx: 0.075, ry: 0.07 },
+    { x: 0.09, y: 0.18, rx: 0.1, ry: 0.14 },
+    { x: 0.91, y: 0.2, rx: 0.1, ry: 0.15 },
+    { x: 0.08, y: 0.52, rx: 0.11, ry: 0.15 },
+    { x: 0.92, y: 0.54, rx: 0.11, ry: 0.15 },
+    { x: 0.09, y: 0.85, rx: 0.1, ry: 0.12 },
+    { x: 0.91, y: 0.87, rx: 0.1, ry: 0.12 },
   ];
   let seed = 41;
   const random = () => {
@@ -65,7 +63,7 @@ function createParticles() {
         particles.push({
           x: centerX + x + (random() - 0.5) * 2,
           y: centerY + y + (random() - 0.5) * 2,
-          radius: 2 + random() * 1.1,
+          radius: 1 + random() * 0.7,
           phase: random() * Math.PI * 2,
           driftX: 9 + random() * 15,
           driftY: 7 + random() * 13,
@@ -84,6 +82,8 @@ function drawParticles(time = 0) {
   }
   lastParticleFrame = time;
   particleContext.clearRect(0, 0, particleWidth, particleHeight);
+  particleContext.shadowBlur = 2;
+  particleContext.shadowColor = "rgba(235, 133, 63, 0.2)";
   particles.forEach((particle) => {
     const driftX = reduceParticleMotion.matches
       ? 0
@@ -105,6 +105,7 @@ function drawParticles(time = 0) {
     particleContext.fillStyle = `rgba(235, 133, 63, ${pulse})`;
     particleContext.fill();
   });
+  particleContext.shadowBlur = 0;
 
   if (!reduceParticleMotion.matches && document.visibilityState === "visible") {
     particleFrame = window.requestAnimationFrame(drawParticles);
