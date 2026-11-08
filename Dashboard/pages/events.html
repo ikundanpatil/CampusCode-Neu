@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="CampusCode student competition workspace prototype">
+<title>Events — CampusCode</title>
+<link rel="icon" href="../assets/images/favicon.png">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body data-page="events">
+<div class="app-shell">
+<aside class="sidebar "><div class="brand">
+<div class="brand-mark" aria-hidden="true">
+<span></span><span></span><span></span>
+</div>
+<div>
+<strong>CampusCode</strong><small>Student space</small>
+</div>
+<button class="sidebar-collapse-toggle" aria-label="Collapse sidebar" aria-expanded="true" data-action="toggle-sidebar"><svg aria-hidden="true" fill="none" height="18" viewbox="0 0 24 24" width="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></button><button class="mobile-close" aria-label="Close menu" data-action="close-drawer"><svg aria-hidden="true" fill="none" height="19" viewbox="0 0 24 24" width="19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="m6 6 12 12M18 6 6 18"></path></svg></button>
+</div>
+<div class="sidebar-label">Workspace</div>
+<nav class="main-nav" aria-label="Main navigation"><a class="" data-tooltip="Overview" href="../index.html" data-nav-link=""><svg aria-hidden="true" fill="none" height="18" viewbox="0 0 24 24" width="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect></svg><span>Overview</span></a><div class="workspace-nav-group is-expanded">
+<button class="workspace-parent " data-tooltip="ARENA" aria-expanded="true"><svg aria-hidden="true" fill="none" height="18" viewbox="0 0 24 24" width="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="M12 3 20 6v5c0 5-3.4 8.3-8 10-4.6-1.7-8-5-8-10V6l8-3Zm-3 9 2 2 4-5"></path></svg><span>ARENA</span><span class="chevron"><svg aria-hidden="true" fill="none" height="16" viewbox="0 0 24 24" width="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="m8 10 4 4 4-4"></path></svg></span></button><div class="workspace-subnav">
+<a class="" tabindex="0" href="../pages/arena.html" data-nav-link=""><span>Explore Arenas</span></a><a class="" tabindex="0" href="../pages/arena.html#leaderboard" data-nav-link=""><span>Leaderboard</span></a><a class="" tabindex="0" href="../pages/arena.html#achievements" data-nav-link=""><span>Badges &amp; Achievements</span></a><a class="" tabindex="0" href="../pages/arena.html#rank" data-nav-link=""><span>My Rank</span></a>
+</div>
+</div>
+<div class="workspace-nav-group is-expanded">
+<button class="workspace-parent group-active" data-tooltip="Events" aria-expanded="true"><svg aria-hidden="true" fill="none" height="18" viewbox="0 0 24 24" width="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><rect x="3" y="5" width="18" height="16" rx="3"></rect><path d="M8 3v4M16 3v4M3 10h18"></path></svg><span>Events</span><span class="chevron"><svg aria-hidden="true" fill="none" height="16" viewbox="0 0 24 24" width="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="m8 10 4 4 4-4"></path></svg></span></button><div class="workspace-subnav">
+<a class="active" tabindex="0" href="../pages/events.html" data-nav-link=""><span>Explore Events</span></a><a class="" tabindex="0" href="../pages/my-events.html" data-nav-link=""><span>My Events</span></a><a class="" tabindex="0" href="../pages/my-events.html#registered" data-nav-link=""><span>Registered Events</span></a>
+</div>
+</div>
+<div class="workspace-nav-group is-expanded">
+<button class="workspace-parent " data-tooltip="AI Tools" aria-expanded="true"><svg aria-hidden="true" fill="none" height="18" viewbox="0 0 24 24" width="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="m12 3 1.4 4.1L17.5 8.5l-4.1 1.4L12 14l-1.4-4.1-4.1-1.4 4.1-1.4L12 3Zm6 11 .8 2.2L21 17l-2.2.8L18 20l-.8-2.2L15 17l2.2-.8L18 14ZM6 14l.9 2.6 2.6.9-2.6.9L6 21l-.9-2.6-2.6-.9 2.6-.9L6 14Z"></path></svg><span>AI Tools</span><span class="chevron"><svg aria-hidden="true" fill="none" height="16" viewbox="0 0 24 24" width="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="m8 10 4 4 4-4"></path></svg></span></button><div class="workspace-subnav">
+<a class="" tabindex="0" href="../index.html" data-nav-link=""><span>StudyMate</span><small>Popular</small></a><a class="" tabindex="0" href="../index.html#ideacheck" data-nav-link=""><span>IdeaCheck</span></a><a class="" tabindex="0" href="../index.html" data-nav-link=""><span>RuleBot</span><small>New</small></a>
+</div>
+</div>
+<div class="workspace-nav-group ">
+<button class="workspace-parent " data-tooltip="Learning" aria-expanded="false"><svg aria-hidden="true" fill="none" height="18" viewbox="0 0 24 24" width="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"></path></svg><span>Learning</span><span class="chevron"><svg aria-hidden="true" fill="none" height="16" viewbox="0 0 24 24" width="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="m8 10 4 4 4-4"></path></svg></span></button><div class="workspace-subnav">
+<a class="" tabindex="-1" href="../index.html#courses" data-nav-link=""><span>My Courses</span></a><a class="" tabindex="-1" href="../pages/communication.html#help" data-nav-link=""><span>Student Guide</span></a><a class="" tabindex="-1" href="../pages/profile.html#achievements" data-nav-link=""><span>Certificates</span></a><a class="" tabindex="-1" href="../pages/profile.html" data-nav-link=""><span>Digital Card</span></a>
+</div>
+</div>
+<div class="workspace-nav-group ">
+<button class="workspace-parent " data-tooltip="Communication" aria-expanded="false"><svg aria-hidden="true" fill="none" height="18" viewbox="0 0 24 24" width="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"></path></svg><span>Communication</span><span class="chevron"><svg aria-hidden="true" fill="none" height="16" viewbox="0 0 24 24" width="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="m8 10 4 4 4-4"></path></svg></span></button><div class="workspace-subnav">
+<a class="" tabindex="-1" href="../pages/communication.html#official" data-nav-link=""><span>Official Updates</span></a><a class="" tabindex="-1" href="../pages/communication.html#notifications" data-nav-link=""><span>Notifications</span></a><a class="" tabindex="-1" href="../pages/communication.html#help" data-nav-link=""><span>Help &amp; Support</span></a>
+</div>
+</div></nav><div class="sidebar-account">
+<div class="sidebar-label">Account</div>
+<a class="profile sidebar-profile-button " data-tooltip="Profile" href="../pages/profile.html" data-nav-link=""><div class="avatar">AM</div>
+<div>
+<strong>Alex Morgan</strong><span>Student</span>
+</div></a><button class="logout-button" data-tooltip="Log out" data-action="demo-logout"><svg aria-hidden="true" fill="none" height="15" viewbox="0 0 24 24" width="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="M10 17l5-5-5-5M15 12H3M15 4h4a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-4"></path></svg> Log out</button>
+</div></aside><main><header class="topbar "><div class="header-page">
+<button class="menu-button" aria-label="Open menu" data-action="open-drawer"><svg aria-hidden="true" fill="none" height="19" viewbox="0 0 24 24" width="19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></button><div class="page-copy">
+<span>CampusCode / Student / Explore Events</span><div>
+<strong>Explore Events</strong><small>Discover your next competition or campus opportunity.</small>
+</div>
+</div>
+</div>
+<div class="global-search"><label class="search-field"><svg aria-hidden="true" fill="none" height="17" viewbox="0 0 24 24" width="17" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4.5-4.5"></path></svg><input aria-label="Search CampusCode" aria-expanded="false" placeholder="Search events, courses, tools..." value=""><kbd><span>Ctrl</span> K</kbd></label></div>
+<div class="header-actions">
+<button class="mobile-search-button" aria-label="Open search"><svg aria-hidden="true" fill="none" height="18" viewbox="0 0 24 24" width="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4.5-4.5"></path></svg></button><div class="header-menu"><button class="header-icon-button" aria-label="Notifications" aria-expanded="false"><svg aria-hidden="true" fill="none" height="18" viewbox="0 0 24 24" width="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"></path></svg><i></i></button></div>
+<div class="header-menu help-control"><button class="header-icon-button" aria-label="Help and support" aria-expanded="false"><svg aria-hidden="true" fill="none" height="18" viewbox="0 0 24 24" width="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><circle cx="12" cy="12" r="9"></circle><path d="M9.6 9a2.5 2.5 0 1 1 3.2 2.4c-.8.3-.8 1-.8 1.6M12 17h.01"></path></svg></button></div>
+<div class="header-menu profile-control"><button class="profile-trigger" aria-label="Open profile menu" aria-expanded="false"><span class="avatar">AM</span><span class="profile-name"><strong>Alex Morgan</strong><small>Student</small></span><span class="profile-chevron"><svg aria-hidden="true" fill="none" height="15" viewbox="0 0 24 24" width="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="m8 10 4 4 4-4"></path></svg></span></button></div>
+</div></header><div class="dashboard"><div class="events-page">
+<section class="events-intro"><div>
+<span class="eyebrow">Student workspace / Discover</span><h1>Explore Events</h1>
+<p>Discover opportunities, compete with talented students and turn your ideas into achievements.</p>
+</div>
+<div class="events-summary" aria-label="Event discovery summary">
+<div>
+<span>Total available</span><strong>05</strong>
+</div>
+<div>
+<span>Upcoming deadlines</span><strong>03</strong>
+</div>
+<div>
+<span>Online opportunities</span><strong>02</strong>
+</div>
+</div></section><section class="discovery-toolbar" aria-label="Event filters"><div class="event-search-row">
+<label class="event-search"><svg aria-hidden="true" fill="none" height="18" viewbox="0 0 24 24" width="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4.5-4.5"></path></svg><input placeholder="Search competitions, hackathons, quizzes..." value=""></label><button class="mobile-filter-button " aria-expanded="false"><svg aria-hidden="true" fill="none" height="17" viewbox="0 0 24 24" width="17" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="M4 6h16M7 12h10M10 18h4"></path></svg> Filters</button><button class="clear-filters desktop-clear" disabled>Clear filters</button>
+</div>
+<div class="category-tabs" aria-label="Event categories">
+<button class="active">All Events</button><button class="">Hackathons</button><button class="">Coding Contests</button><button class="">Quizzes</button><button class="">Workshops</button><button class="">Ideathons</button>
+</div>
+<div class="advanced-filters ">
+<label><span>Event status</span><select><option selected>All</option>
+<option>Open</option>
+<option>Closing Soon</option></select></label><label><span>Participation mode</span><select><option selected>All</option>
+<option>Online</option>
+<option>Offline</option>
+<option>Hybrid</option></select></label><label><span>Difficulty level</span><select><option selected>All</option>
+<option>Beginner</option>
+<option>Intermediate</option>
+<option>Advanced</option></select></label><label><span>Sort by</span><select><option selected>Latest</option>
+<option>Deadline</option>
+<option>Popularity</option></select></label><button class="clear-filters mobile-clear" disabled>Clear filters</button>
+</div></section><section class="featured-competition"><div class="featured-event-copy">
+<div class="featured-label">
+<svg aria-hidden="true" fill="none" height="14" viewbox="0 0 24 24" width="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="m12 3 1.4 4.1L17.5 8.5l-4.1 1.4L12 14l-1.4-4.1-4.1-1.4 4.1-1.4L12 3Zm6 11 .8 2.2L21 17l-2.2.8L18 20l-.8-2.2L15 17l2.2-.8L18 14ZM6 14l.9 2.6 2.6.9-2.6.9L6 21l-.9-2.6-2.6-.9 2.6-.9L6 14Z"></path></svg> Featured competition</div>
+<span class="event-category">Hackathon · Team-based</span><h2>Campus Innovation Hackathon 2026</h2>
+<p>Build a practical technology solution for a real campus challenge. Teams move from problem discovery to a working prototype with guidance from mentors and industry reviewers.</p>
+<div class="featured-meta">
+<div>
+<span>Mode</span><strong>Hybrid</strong>
+</div>
+<div>
+<span>Prize pool</span><strong>₹50,000</strong>
+</div>
+<div>
+<span>Registration deadline</span><strong>25 November 2026</strong>
+</div>
+</div>
+<div class="featured-actions">
+<button class="secondary-action">View Details</button><button class="event-primary-action">Register Now <svg aria-hidden="true" fill="none" height="16" viewbox="0 0 24 24" width="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="M5 12h14m-5-5 5 5-5 5"></path></svg></button>
+</div>
+</div>
+<div class="featured-artwork" aria-hidden="true">
+<div class="event-art-grid"></div>
+<div class="art-disc disc-one"></div>
+<div class="art-disc disc-two"></div>
+<div class="art-core">
+<span>01</span><strong>Build<br>what’s next.</strong>
+</div>
+<div class="art-float art-float-one">
+<span>Mode</span><strong>Hybrid</strong>
+</div>
+<div class="art-float art-float-two">
+<span>Status</span><strong>Open</strong>
+</div>
+</div></section><section class="opportunities-section"><div class="section-heading">
+<div>
+<span class="eyebrow">Open opportunities</span><h2>Discover Opportunities</h2>
+<p>Find competitions that match your interests and skills.</p>
+</div>
+<span class="result-count">4 events found</span>
+</div>
+<div class="events-grid">
+<article class="event-list-card"><div class="event-card-top">
+<span class="event-category">Ideathon</span><span class="status-badge ">Open</span>
+</div>
+<div class="event-card-icon"><svg aria-hidden="true" fill="none" height="21" viewbox="0 0 24 24" width="21" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><rect x="4" y="7" width="16" height="12" rx="3"></rect><path d="M12 3v4M9 12h.01M15 12h.01M9 16h6"></path></svg></div>
+<h3>Future Builders Ideathon</h3>
+<p>Turn a meaningful campus problem into a clear, feasible, and compelling solution concept.</p>
+<span class="event-organizer">By Student Entrepreneurship Hub</span><div class="event-card-meta">
+<div>
+<svg aria-hidden="true" fill="none" height="14" viewbox="0 0 24 24" width="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M7 10h4M7 14h2M14 10h3"></path></svg><span><small>Mode</small>Offline</span>
+</div>
+<div>
+<svg aria-hidden="true" fill="none" height="14" viewbox="0 0 24 24" width="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg><span><small>Deadline</small>5 December 2026</span>
+</div>
+</div>
+<div class="event-card-actions">
+<button>View Details</button><button>Register Now <svg aria-hidden="true" fill="none" height="15" viewbox="0 0 24 24" width="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="M5 12h14m-5-5 5 5-5 5"></path></svg></button>
+</div></article><article class="event-list-card"><div class="event-card-top">
+<span class="event-category">Quiz</span><span class="status-badge closing">Closing Soon</span>
+</div>
+<div class="event-card-icon"><svg aria-hidden="true" fill="none" height="21" viewbox="0 0 24 24" width="21" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><circle cx="12" cy="12" r="9"></circle><path d="M9.6 9a2.5 2.5 0 1 1 3.2 2.4c-.8.3-.8 1-.8 1.6M12 17h.01"></path></svg></div>
+<h3>Tech Knowledge Quiz</h3>
+<p>Test your understanding of emerging technology, computing history, and digital culture.</p>
+<span class="event-organizer">By Campus Computing Society</span><div class="event-card-meta">
+<div>
+<svg aria-hidden="true" fill="none" height="14" viewbox="0 0 24 24" width="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M7 10h4M7 14h2M14 10h3"></path></svg><span><small>Mode</small>Online</span>
+</div>
+<div>
+<svg aria-hidden="true" fill="none" height="14" viewbox="0 0 24 24" width="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg><span><small>Deadline</small>15 November 2026</span>
+</div>
+</div>
+<div class="event-card-actions">
+<button>View Details</button><button>Register Now <svg aria-hidden="true" fill="none" height="15" viewbox="0 0 24 24" width="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="M5 12h14m-5-5 5 5-5 5"></path></svg></button>
+</div></article><article class="event-list-card"><div class="event-card-top">
+<span class="event-category">Hackathon</span><span class="status-badge ">Open</span>
+</div>
+<div class="event-card-icon"><svg aria-hidden="true" fill="none" height="21" viewbox="0 0 24 24" width="21" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="m12 3 1.4 4.1L17.5 8.5l-4.1 1.4L12 14l-1.4-4.1-4.1-1.4 4.1-1.4L12 3Zm6 11 .8 2.2L21 17l-2.2.8L18 20l-.8-2.2L15 17l2.2-.8L18 14ZM6 14l.9 2.6 2.6.9-2.6.9L6 21l-.9-2.6-2.6-.9 2.6-.9L6 14Z"></path></svg></div>
+<h3>AI Innovation Challenge</h3>
+<p>Create a responsible AI concept that improves learning, accessibility, or campus life.</p>
+<span class="event-organizer">By Future Systems Lab</span><div class="event-card-meta">
+<div>
+<svg aria-hidden="true" fill="none" height="14" viewbox="0 0 24 24" width="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M7 10h4M7 14h2M14 10h3"></path></svg><span><small>Mode</small>Hybrid</span>
+</div>
+<div>
+<svg aria-hidden="true" fill="none" height="14" viewbox="0 0 24 24" width="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg><span><small>Deadline</small>28 November 2026</span>
+</div>
+</div>
+<div class="event-card-actions">
+<button>View Details</button><button>Register Now <svg aria-hidden="true" fill="none" height="15" viewbox="0 0 24 24" width="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="M5 12h14m-5-5 5 5-5 5"></path></svg></button>
+</div></article><article class="event-list-card"><div class="event-card-top">
+<span class="event-category">Coding Contest</span><span class="status-badge ">Open</span>
+</div>
+<div class="event-card-icon"><svg aria-hidden="true" fill="none" height="21" viewbox="0 0 24 24" width="21" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M7 10h4M7 14h2M14 10h3"></path></svg></div>
+<h3>National Coding Challenge</h3>
+<p>Solve algorithmic problems across data structures, logic, and efficient programming.</p>
+<span class="event-organizer">By CodeNation Student League</span><div class="event-card-meta">
+<div>
+<svg aria-hidden="true" fill="none" height="14" viewbox="0 0 24 24" width="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M7 10h4M7 14h2M14 10h3"></path></svg><span><small>Mode</small>Online</span>
+</div>
+<div>
+<svg aria-hidden="true" fill="none" height="14" viewbox="0 0 24 24" width="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg><span><small>Deadline</small>20 November 2026</span>
+</div>
+</div>
+<div class="event-card-actions">
+<button>View Details</button><button>Register Now <svg aria-hidden="true" fill="none" height="15" viewbox="0 0 24 24" width="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="M5 12h14m-5-5 5 5-5 5"></path></svg></button>
+</div></article>
+</div></section><section class="recommendation-banner"><div>
+<span class="eyebrow">Personalized discovery</span><h2>Can't find the right competition?</h2>
+<p>Explore opportunities based on your interests and skills.</p>
+</div>
+<button>Explore Recommendations <svg aria-hidden="true" fill="none" height="16" viewbox="0 0 24 24" width="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="M5 12h14m-5-5 5 5-5 5"></path></svg></button></section>
+</div></div></main>
+</div>
+<script src="../js/app.js" defer></script><script src="../js/navigation.js" defer></script><script src="../js/events.js" defer></script>
+</body>
+</html>

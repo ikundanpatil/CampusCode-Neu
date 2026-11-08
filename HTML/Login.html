@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | CampusCode</title>
+    <link rel="shortcut icon" href="./Assets/Images/Favicon.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="./Assets/CSS/Login.css" />
+  </head>
+  <body>
+    <section class="login-page">
+      <div class="auth-card">
+        <button type="button" class="back-btn" onclick="window.location.href='../Landing.html'">← Back</button>
+        <div class="auth-header">
+          <div class="brand">
+            <span class="logo-mark">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+            <strong class="logo-name">CAMPUSCODE</strong>
+          </div>
+          <h1>Welcome Back</h1>
+          <p>Sign in to continue your learning journey</p>
+        </div>
+        <div class="auth-body">
+          <form onsubmit="event.preventDefault()">
+            <label class="input-label">Email Address</label>
+            <input type="email" placeholder="you@example.com" />
+
+            <label class="input-label">Password</label>
+            <input type="password" placeholder="••••••••" />
+
+            <div class="forgot-row">
+              <label class="remember">
+                <input type="checkbox" /> Remember me
+              </label>
+              <a href="#" class="forgot-link">Forgot password?</a>
+            </div>
+
+            <button type="button" class="auth-btn primary">Continue with Email</button>
+
+            <div class="or-divider"><span>or</span></div>
+
+            <div class="social-login">
+              <button type="button" class="social-btn">
+                <img src="https://fonts.gstatic.com/s/i/shortterm/release/googleg_symbols/24px.svg" alt="Google" />
+                Google
+              </button>
+              <button type="button" class="social-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.302-1.101-.737-1.393-.737-1.393-.67-.459.14-.459.14-.459 1.198.081 1.618.897 1.618.897 1.17 1.289 1.824 1.959 2.474 1.453.131.665.587 1.125 1.131 1.647 1.143 2.005 1.62 2.724 2.598 2.069-.874-1.27-2.075-1.61-2.644-1.887-.644-.193-1.568-.262-2.29-.063-.224-.84-.498-1.582-.498-2.396 0-.523.177-.951.45-1.262-.086-.314-.203-.665-.085-1.348.106-.957 1.233-1.647 2.39-1.647.946 0 1.704.691 1.704 1.501v.464c.982-.155 1.878-.467 2.701-.467 1.245 0 1.934.745 1.934 1.403v1.169c0 .734-.075 1.21-.256 1.504.943-.016 1.829-.403 2.366-.768-.458-.097-.906-.24-1.288-.474z"/></svg>
+                GitHub
+              </button>
+              <button type="button" class="social-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584 .012 4.85 .072 3.252 .144 4.771 1.702 4.771 4.805 0 2.647-1.804 4.848-4.293 5.275-.112 .12-.245 .23-.307 .342-.173 .316-.046 .812 .431 1.025 .913 .408 1.505 1.276 1.505 2.296 0 1.319-.662 2.421-1.573 2.943-.693 .398-1.438 .597-2.104 .687l-.408 .055c-.012 .002-.031 .005-.043 .008-.471 .104-.974 .154-1.495 .154-.528 0-1.035-.052-1.511-.156-.012-.003-.031-.006-.043-.008l-.409-.055c-.666-.09-1.411-.289-2.104-.687-.91-.522-1.573-1.624-1.573-2.943 0-1.02.592-1.888 1.505-2.296.477-.213.604-.709.431-1.025-.062-.112-.195-.222-.307-.342-2.489-.427-4.293-2.628-4.293-5.275 0-3.103 1.519-4.661 4.771-4.805 1.265-.059 2.645-.072 4.85-.072 5.053 0 5.49 3.674 5.49 5.958 0 2.284-3.622 2.284-4.994 2.284-1.371 0-4.994 0-4.994-2.284 0-2.284.437-5.958 5.49-5.958z"/></svg>
+                Apple
+              </button>
+            </div>
+
+            <p class="terms">
+              Don't have an account? <a href="./Register.html">Create account</a>
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

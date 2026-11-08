@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="CampusCode student competition workspace prototype">
+<title>Profile — CampusCode</title>
+<link rel="icon" href="../assets/images/favicon.png">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body data-page="profile">
+<div class="app-shell">
+<aside class="sidebar "><div class="brand">
+<div class="brand-mark" aria-hidden="true">
+<span></span><span></span><span></span>
+</div>
+<div>
+<strong>CampusCode</strong><small>Student space</small>
+</div>
+<button class="sidebar-collapse-toggle" aria-label="Collapse sidebar" aria-expanded="true" data-action="toggle-sidebar"><svg aria-hidden="true" fill="none" height="18" viewbox="0 0 24 24" width="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></button><button class="mobile-close" aria-label="Close menu" data-action="close-drawer"><svg aria-hidden="true" fill="none" height="19" viewbox="0 0 24 24" width="19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="m6 6 12 12M18 6 6 18"></path></svg></button>
+</div>
+<div class="sidebar-label">Workspace</div>
+<nav class="main-nav" aria-label="Main navigation"><a class="" data-tooltip="Overview" href="../index.html" data-nav-link=""><svg aria-hidden="true" fill="none" height="18" viewbox="0 0 24 24" width="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect></svg><span>Overview</span></a><div class="workspace-nav-group is-expanded">
+<button class="workspace-parent " data-tooltip="ARENA" aria-expanded="true"><svg aria-hidden="true" fill="none" height="18" viewbox="0 0 24 24" width="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="M12 3 20 6v5c0 5-3.4 8.3-8 10-4.6-1.7-8-5-8-10V6l8-3Zm-3 9 2 2 4-5"></path></svg><span>ARENA</span><span class="chevron"><svg aria-hidden="true" fill="none" height="16" viewbox="0 0 24 24" width="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="m8 10 4 4 4-4"></path></svg></span></button><div class="workspace-subnav">
+<a class="" tabindex="0" href="../pages/arena.html" data-nav-link=""><span>Explore Arenas</span></a><a class="" tabindex="0" href="../pages/arena.html#leaderboard" data-nav-link=""><span>Leaderboard</span></a><a class="" tabindex="0" href="../pages/arena.html#achievements" data-nav-link=""><span>Badges &amp; Achievements</span></a><a class="" tabindex="0" href="../pages/arena.html#rank" data-nav-link=""><span>My Rank</span></a>
+</div>
+</div>
+<div class="workspace-nav-group is-expanded">
+<button class="workspace-parent " data-tooltip="Events" aria-expanded="true"><svg aria-hidden="true" fill="none" height="18" viewbox="0 0 24 24" width="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><rect x="3" y="5" width="18" height="16" rx="3"></rect><path d="M8 3v4M16 3v4M3 10h18"></path></svg><span>Events</span><span class="chevron"><svg aria-hidden="true" fill="none" height="16" viewbox="0 0 24 24" width="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="m8 10 4 4 4-4"></path></svg></span></button><div class="workspace-subnav">
+<a class="" tabindex="0" href="../pages/events.html" data-nav-link=""><span>Explore Events</span></a><a class="" tabindex="0" href="../pages/my-events.html" data-nav-link=""><span>My Events</span></a><a class="" tabindex="0" href="../pages/my-events.html#registered" data-nav-link=""><span>Registered Events</span></a>
+</div>
+</div>
+<div class="workspace-nav-group is-expanded">
+<button class="workspace-parent " data-tooltip="AI Tools" aria-expanded="true"><svg aria-hidden="true" fill="none" height="18" viewbox="0 0 24 24" width="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="m12 3 1.4 4.1L17.5 8.5l-4.1 1.4L12 14l-1.4-4.1-4.1-1.4 4.1-1.4L12 3Zm6 11 .8 2.2L21 17l-2.2.8L18 20l-.8-2.2L15 17l2.2-.8L18 14ZM6 14l.9 2.6 2.6.9-2.6.9L6 21l-.9-2.6-2.6-.9 2.6-.9L6 14Z"></path></svg><span>AI Tools</span><span class="chevron"><svg aria-hidden="true" fill="none" height="16" viewbox="0 0 24 24" width="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="m8 10 4 4 4-4"></path></svg></span></button><div class="workspace-subnav">
+<a class="" tabindex="0" href="../index.html" data-nav-link=""><span>StudyMate</span><small>Popular</small></a><a class="" tabindex="0" href="../index.html#ideacheck" data-nav-link=""><span>IdeaCheck</span></a><a class="" tabindex="0" href="../index.html" data-nav-link=""><span>RuleBot</span><small>New</small></a>
+</div>
+</div>
+<div class="workspace-nav-group ">
+<button class="workspace-parent " data-tooltip="Learning" aria-expanded="false"><svg aria-hidden="true" fill="none" height="18" viewbox="0 0 24 24" width="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"></path></svg><span>Learning</span><span class="chevron"><svg aria-hidden="true" fill="none" height="16" viewbox="0 0 24 24" width="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="m8 10 4 4 4-4"></path></svg></span></button><div class="workspace-subnav">
+<a class="" tabindex="-1" href="../index.html#courses" data-nav-link=""><span>My Courses</span></a><a class="" tabindex="-1" href="../pages/communication.html#help" data-nav-link=""><span>Student Guide</span></a><a class="" tabindex="-1" href="../pages/profile.html#achievements" data-nav-link=""><span>Certificates</span></a><a class="" tabindex="-1" href="../pages/profile.html" data-nav-link=""><span>Digital Card</span></a>
+</div>
+</div>
+<div class="workspace-nav-group ">
+<button class="workspace-parent " data-tooltip="Communication" aria-expanded="false"><svg aria-hidden="true" fill="none" height="18" viewbox="0 0 24 24" width="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"></path></svg><span>Communication</span><span class="chevron"><svg aria-hidden="true" fill="none" height="16" viewbox="0 0 24 24" width="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="m8 10 4 4 4-4"></path></svg></span></button><div class="workspace-subnav">
+<a class="" tabindex="-1" href="../pages/communication.html#official" data-nav-link=""><span>Official Updates</span></a><a class="" tabindex="-1" href="../pages/communication.html#notifications" data-nav-link=""><span>Notifications</span></a><a class="" tabindex="-1" href="../pages/communication.html#help" data-nav-link=""><span>Help &amp; Support</span></a>
+</div>
+</div></nav><div class="sidebar-account">
+<div class="sidebar-label">Account</div>
+<a class="profile sidebar-profile-button active" data-tooltip="Profile" href="../pages/profile.html" data-nav-link=""><div class="avatar">AM</div>
+<div>
+<strong>Alex Morgan</strong><span>Student</span>
+</div></a><button class="logout-button" data-tooltip="Log out" data-action="demo-logout"><svg aria-hidden="true" fill="none" height="15" viewbox="0 0 24 24" width="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="M10 17l5-5-5-5M15 12H3M15 4h4a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-4"></path></svg> Log out</button>
+</div></aside><main><header class="topbar "><div class="header-page">
+<button class="menu-button" aria-label="Open menu" data-action="open-drawer"><svg aria-hidden="true" fill="none" height="19" viewbox="0 0 24 24" width="19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></button><div class="page-copy">
+<span>CampusCode / Student / Profile</span><div>
+<strong>Profile</strong><small>Manage your student identity and achievements.</small>
+</div>
+</div>
+</div>
+<div class="global-search"><label class="search-field"><svg aria-hidden="true" fill="none" height="17" viewbox="0 0 24 24" width="17" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4.5-4.5"></path></svg><input aria-label="Search CampusCode" aria-expanded="false" placeholder="Search events, courses, tools..." value=""><kbd><span>Ctrl</span> K</kbd></label></div>
+<div class="header-actions">
+<button class="mobile-search-button" aria-label="Open search"><svg aria-hidden="true" fill="none" height="18" viewbox="0 0 24 24" width="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4.5-4.5"></path></svg></button><div class="header-menu"><button class="header-icon-button" aria-label="Notifications" aria-expanded="false"><svg aria-hidden="true" fill="none" height="18" viewbox="0 0 24 24" width="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"></path></svg><i></i></button></div>
+<div class="header-menu help-control"><button class="header-icon-button" aria-label="Help and support" aria-expanded="false"><svg aria-hidden="true" fill="none" height="18" viewbox="0 0 24 24" width="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><circle cx="12" cy="12" r="9"></circle><path d="M9.6 9a2.5 2.5 0 1 1 3.2 2.4c-.8.3-.8 1-.8 1.6M12 17h.01"></path></svg></button></div>
+<div class="header-menu profile-control"><button class="profile-trigger" aria-label="Open profile menu" aria-expanded="false"><span class="avatar">AM</span><span class="profile-name"><strong>Alex Morgan</strong><small>Student</small></span><span class="profile-chevron"><svg aria-hidden="true" fill="none" height="15" viewbox="0 0 24 24" width="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="m8 10 4 4 4-4"></path></svg></span></button></div>
+</div></header><div class="dashboard"><div class="profile-page">
+<section class="profile-overview-card"><div class="profile-cover-art" aria-hidden="true">
+<div class="profile-cover-grid"></div>
+<span></span><span></span>
+</div>
+<div class="profile-overview-content">
+<div class="profile-avatar-large">AJ<span><svg aria-hidden="true" fill="none" height="12" viewbox="0 0 24 24" width="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="m5 12 4 4L19 6"></path></svg></span>
+</div>
+<div class="profile-identity">
+<span class="eyebrow">Student profile / Public portfolio</span><h1>Alex Johnson</h1>
+<strong>@alexjohnson</strong><div class="profile-education">
+<span><svg aria-hidden="true" fill="none" height="15" viewbox="0 0 24 24" width="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"></path></svg>Northbridge Institute of Technology</span><span><svg aria-hidden="true" fill="none" height="15" viewbox="0 0 24 24" width="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M7 10h4M7 14h2M14 10h3"></path></svg>B.Tech · Computer Science</span><span><svg aria-hidden="true" fill="none" height="15" viewbox="0 0 24 24" width="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><rect x="3" y="5" width="18" height="16" rx="3"></rect><path d="M8 3v4M16 3v4M3 10h18"></path></svg>Class of 2027</span>
+</div>
+<p>Computer science student building practical products, exploring responsible AI, and competing to turn ambitious ideas into useful outcomes.</p>
+</div>
+<div class="profile-actions">
+<button>Edit Profile</button><button>Share Profile <svg aria-hidden="true" fill="none" height="15" viewbox="0 0 24 24" width="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="M5 12h14m-5-5 5 5-5 5"></path></svg></button>
+</div>
+</div></section><div class="profile-main-grid">
+<section class="competitor-identity-card"><div class="competitor-heading">
+<div>
+<span class="eyebrow">CampusCode Arena identity</span><h2>Challenger</h2>
+<p>Level 08 competitor</p>
+</div>
+<span class="profile-rank-emblem"><svg aria-hidden="true" fill="none" height="31" viewbox="0 0 24 24" width="31" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="M12 3 20 6v5c0 5-3.4 8.3-8 10-4.6-1.7-8-5-8-10V6l8-3Zm-3 9 2 2 4-5"></path></svg><small>08</small></span>
+</div>
+<div class="profile-xp-heading">
+<span>Verified XP</span><strong>2,450 <small>XP</small></strong>
+</div>
+<div class="profile-xp-track"><span class="progress-width-61"></span></div>
+<div class="profile-next-rank">
+<span>Current · Challenger</span><span>1,550 XP to Contender</span>
+</div>
+<div class="competitor-stats">
+<div>
+<span>Competitions</span><strong>18</strong>
+</div>
+<div>
+<span>Top 10 finishes</span><strong>06</strong>
+</div>
+<div>
+<span>Victories</span><strong>03</strong>
+</div>
+</div>
+<p class="profile-demo-note">Arena identity uses fictional demonstration data based on verified competition outcomes.</p></section><aside class="profile-completion-card"><div class="completion-ring">
+<span>78%</span><small>complete</small>
+</div>
+<div>
+<span class="eyebrow">Profile strength</span><h2>Build a stronger portfolio</h2>
+<p>Complete your profile to help teammates and organizers understand your experience.</p>
+</div>
+<ul>
+<li class="complete">
+<svg aria-hidden="true" fill="none" height="13" viewbox="0 0 24 24" width="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="m5 12 4 4L19 6"></path></svg>Complete your bio</li>
+<li class="complete">
+<svg aria-hidden="true" fill="none" height="13" viewbox="0 0 24 24" width="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="m5 12 4 4L19 6"></path></svg>Add your skills</li>
+<li>
+<span></span>Add a profile photo</li>
+<li>
+<span></span>Connect your portfolio</li>
+</ul></aside>
+</div>
+<section class="profile-achievements"><div class="section-heading">
+<div>
+<span class="eyebrow">Verified milestones</span><h2>Badges &amp; Achievements</h2>
+<p>A collection earned through completed competitions and evaluated results.</p>
+</div>
+<button class="profile-section-action">View All Achievements <svg aria-hidden="true" fill="none" height="15" viewbox="0 0 24 24" width="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="M5 12h14m-5-5 5 5-5 5"></path></svg></button>
+</div>
+<div class="profile-badge-grid">
+<button class="profile-badge aqua"><span><svg aria-hidden="true" fill="none" height="23" viewbox="0 0 24 24" width="23" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="M12 3 20 6v5c0 5-3.4 8.3-8 10-4.6-1.7-8-5-8-10V6l8-3Zm-3 9 2 2 4-5"></path></svg></span><strong>First Challenger</strong><small>Earned</small><p>Completed a first verified CampusCode competition.</p></button><button class="profile-badge indigo"><span><svg aria-hidden="true" fill="none" height="23" viewbox="0 0 24 24" width="23" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect></svg></span><strong>Code Warrior</strong><small>Earned</small><p>Demonstrated strong performance in a coding competition.</p></button><button class="profile-badge violet"><span><svg aria-hidden="true" fill="none" height="23" viewbox="0 0 24 24" width="23" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="m12 3 1.4 4.1L17.5 8.5l-4.1 1.4L12 14l-1.4-4.1-4.1-1.4 4.1-1.4L12 3Zm6 11 .8 2.2L21 17l-2.2.8L18 20l-.8-2.2L15 17l2.2-.8L18 14ZM6 14l.9 2.6 2.6.9-2.6.9L6 21l-.9-2.6-2.6-.9 2.6-.9L6 14Z"></path></svg></span><strong>AI Explorer</strong><small>Earned</small><p>Built and evaluated an artificial intelligence solution.</p></button><button class="profile-badge blue"><span><svg aria-hidden="true" fill="none" height="23" viewbox="0 0 24 24" width="23" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><circle cx="12" cy="8" r="5"></circle><path d="m8.5 12-1 9 4.5-2 4.5 2-1-9"></path></svg></span><strong>Top Performer</strong><small>Earned</small><p>Reached a top-ten position in a verified competition.</p></button><button class="profile-badge aqua"><span><svg aria-hidden="true" fill="none" height="23" viewbox="0 0 24 24" width="23" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><circle cx="12" cy="8" r="5"></circle><path d="m8.5 12-1 9 4.5-2 4.5 2-1-9"></path></svg></span><strong>Podium Finisher</strong><small>Earned</small><p>Earned a place among the top three competitors.</p></button><button class="profile-badge indigo"><span><svg aria-hidden="true" fill="none" height="23" viewbox="0 0 24 24" width="23" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="M12 3 20 6v5c0 5-3.4 8.3-8 10-4.6-1.7-8-5-8-10V6l8-3Zm-3 9 2 2 4-5"></path></svg></span><strong>Arena Champion</strong><small>Earned</small><p>Won a verified CampusCode competition.</p></button><button class="profile-badge locked"><span><svg aria-hidden="true" fill="none" height="23" viewbox="0 0 24 24" width="23" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="m12 3 1.4 4.1L17.5 8.5l-4.1 1.4L12 14l-1.4-4.1-4.1-1.4 4.1-1.4L12 3Zm6 11 .8 2.2L21 17l-2.2.8L18 20l-.8-2.2L15 17l2.2-.8L18 14ZM6 14l.9 2.6 2.6.9-2.6.9L6 21l-.9-2.6-2.6-.9 2.6-.9L6 14Z"></path></svg></span><strong>Multi-Arena Master</strong><small>Locked</small><p>Achieve verified results across every competitive arena.</p></button><button class="profile-badge locked"><span><svg aria-hidden="true" fill="none" height="23" viewbox="0 0 24 24" width="23" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><circle cx="12" cy="8" r="5"></circle><path d="m8.5 12-1 9 4.5-2 4.5 2-1-9"></path></svg></span><strong>Legend Path</strong><small>Locked</small><p>Begin the final progression toward CampusCode Legend.</p></button>
+</div></section><div class="profile-detail-grid">
+<section class="competition-history"><div class="profile-panel-heading">
+<div>
+<span class="eyebrow">Competitive record</span><h2>Competition History</h2>
+</div>
+<div class="history-filters">
+<button class="active">All</button><button class="">Completed</button><button class="">Ongoing</button>
+</div>
+</div>
+<div class="history-table">
+<div class="history-labels">
+<span>Competition</span><span>Date</span><span>Result</span><span>XP</span>
+</div>
+<article><span class="history-icon"><svg aria-hidden="true" fill="none" height="17" viewbox="0 0 24 24" width="17" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect></svg></span><span class="history-name"><strong>National Coding Challenge</strong><small>Code Arena</small></span><span class="history-date">20 Oct 2026</span><span class="history-result ">Rank #04</span><strong class="history-xp">+320</strong></article><article><span class="history-icon"><svg aria-hidden="true" fill="none" height="17" viewbox="0 0 24 24" width="17" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="m12 3 1.4 4.1L17.5 8.5l-4.1 1.4L12 14l-1.4-4.1-4.1-1.4 4.1-1.4L12 3Zm6 11 .8 2.2L21 17l-2.2.8L18 20l-.8-2.2L15 17l2.2-.8L18 14ZM6 14l.9 2.6 2.6.9-2.6.9L6 21l-.9-2.6-2.6-.9 2.6-.9L6 14Z"></path></svg></span><span class="history-name"><strong>AI Innovation Challenge</strong><small>AI Arena</small></span><span class="history-date">12 Sep 2026</span><span class="history-result ">Rank #02</span><strong class="history-xp">+580</strong></article><article><span class="history-icon"><svg aria-hidden="true" fill="none" height="17" viewbox="0 0 24 24" width="17" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><rect x="4" y="7" width="16" height="12" rx="3"></rect><path d="M12 3v4M9 12h.01M15 12h.01M9 16h6"></path></svg></span><span class="history-name"><strong>Campus Innovation Hackathon</strong><small>Innovation Arena</small></span><span class="history-date">18 Aug 2026</span><span class="history-result winner">Winner</span><strong class="history-xp">+750</strong></article><article><span class="history-icon"><svg aria-hidden="true" fill="none" height="17" viewbox="0 0 24 24" width="17" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><rect x="4" y="7" width="16" height="12" rx="3"></rect><path d="M12 3v4M9 12h.01M15 12h.01M9 16h6"></path></svg></span><span class="history-name"><strong>ReBuild '26</strong><small>Innovation Arena</small></span><span class="history-date">In progress</span><span class="history-result ">Round 2</span><strong class="history-xp">Pending</strong></article>
+</div></section><section class="skills-panel"><div class="profile-panel-heading">
+<div>
+<span class="eyebrow">Specialization</span><h2>Skills</h2>
+</div>
+<button class="profile-section-action">Edit Skills</button>
+</div>
+<div class="skills-list">
+<div>
+<div>
+<span>Programming</span><strong>88%</strong>
+</div>
+<div class="skill-track"><span class="progress-width-88"></span></div>
+</div>
+<div>
+<div>
+<span>Problem Solving</span><strong>92%</strong>
+</div>
+<div class="skill-track"><span class="progress-width-92"></span></div>
+</div>
+<div>
+<div>
+<span>Artificial Intelligence</span><strong>76%</strong>
+</div>
+<div class="skill-track"><span class="progress-width-76"></span></div>
+</div>
+<div>
+<div>
+<span>UI/UX Design</span><strong>68%</strong>
+</div>
+<div class="skill-track"><span class="progress-width-68"></span></div>
+</div>
+<div>
+<div>
+<span>Web Development</span><strong>84%</strong>
+</div>
+<div class="skill-track"><span class="progress-width-84"></span></div>
+</div>
+</div>
+<div class="skill-tags">
+<span>Programming</span><span>Problem Solving</span><span>Artificial Intelligence</span><span>UI/UX Design</span><span>Web Development</span>
+</div></section>
+</div>
+</div></div></main>
+</div>
+<script src="../js/app.js" defer></script><script src="../js/navigation.js" defer></script><script src="../js/profile.js" defer></script>
+</body>
+</html>

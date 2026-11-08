@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Discover hackathons, coding competitions, AI challenges and opportunities to showcase your skills with CampusCode."
+    />
+    <meta name="theme-color" content="#f4f5f7" />
+    <title>CampusCode — Your skills deserve an arena</title>
+    <link rel="icon" href="./Assets/Images/Favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./Assets/CSS/Landing.css" />
+  </head>
+  <body>
+    <header class="site-header" id="top">
+      <div class="nav-shell">
+        <a class="brand" href="#top" aria-label="CampusCode home">
+          <img src="./Assets/Images/Favicon.svg" alt="" />
+          <span>Campus<span class="brand-accent">Code</span></span>
+        </a>
+
+        <nav class="desktop-nav" aria-label="Main navigation">
+          <a href="#hero">Discover</a>
+          <a href="#competitions">Competitions</a>
+          <a href="#arena">Arena</a>
+          <a href="#about">About</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button class="login-link" type="button" data-auth-open="login">Login</button>
+          <button class="button button-primary nav-join" type="button" data-auth-open="register">
+            Get Started <span aria-hidden="true">↗</span>
+          </button>
+          <button
+            class="menu-toggle"
+            id="menu-toggle"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="mobile-nav"
+          >
+            <span></span><span></span>
+          </button>
+        </div>
+      </div>
+      <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation" aria-hidden="true">
+        <a href="#hero">Discover</a>
+        <a href="#competitions">Competitions</a>
+        <a href="#arena">Arena</a>
+        <a href="#about">About</a>
+        <button type="button" data-auth-open="login">Login</button>
+        <button class="mobile-join" type="button" data-auth-open="register">Get Started <span aria-hidden="true">↗</span></button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="hero" aria-labelledby="hero-title">
+        <div class="hero-wash hero-wash-left" aria-hidden="true"></div>
+        <div class="hero-wash hero-wash-right" aria-hidden="true"></div>
+        <div class="hero-copy">
+          <p class="eyebrow"><span></span> BUILD <b>·</b> LEARN <b>·</b> COMPETE</p>
+          <h1 id="hero-title">YOUR SKILLS<br />DESERVE AN <span>ARENA.</span></h1>
+          <p class="hero-description">
+            Discover hackathons, coding competitions, AI challenges and
+            opportunities to showcase your skills.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary button-large" href="#competitions">
+              Explore Competitions <span aria-hidden="true">↗</span>
+            </a>
+            <button class="button button-secondary button-large" type="button" data-auth-open="register">
+              Join CampusCode
+            </button>
+          </div>
+        </div>
+
+        <div class="competition-scene" id="competitions" aria-label="Featured student competitions">
+          <svg class="card-curve" viewBox="0 0 1200 220" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M22 133 C185 205 295 194 418 130 C554 57 647 32 770 83 C908 141 1033 177 1177 92" />
+          </svg>
+
+          <article class="competition-card card-ai">
+            <span class="card-pin" aria-hidden="true"></span>
+            <div class="card-art ai-art" aria-hidden="true">
+              <span class="ai-orbit"></span><span class="ai-core">✳</span>
+              <span class="art-caption">IDEAS<br />IN MOTION</span>
+              <span class="art-index">01</span>
+            </div>
+            <div class="card-copy"><span class="category">AI · INNOVATION</span><h2>AI Innovation<br />Challenge</h2><span class="card-link">Explore <b>↗</b></span></div>
+          </article>
+
+          <article class="competition-card card-hackathon">
+            <span class="card-pin" aria-hidden="true"></span>
+            <div class="card-art hack-art" aria-hidden="true">
+              <span class="hack-type">&lt;/&gt;</span><span class="hack-lines"></span>
+              <span class="art-caption">BUILD<br />TOGETHER</span>
+              <span class="art-index">02</span>
+            </div>
+            <div class="card-copy"><span class="category">HACKATHON · NATIONAL</span><h2>National Coding<br />Hackathon</h2><span class="card-link">Explore <b>↗</b></span></div>
+          </article>
+
+          <article class="competition-card card-startup">
+            <span class="card-pin" aria-hidden="true"></span>
+            <div class="card-art startup-art" aria-hidden="true">
+              <span class="startup-sun"></span><span class="startup-stairs"></span>
+              <span class="art-caption">MAKE IT<br />REAL.</span>
+              <span class="art-index">03</span>
+            </div>
+            <div class="card-copy"><span class="category">ENTREPRENEURSHIP</span><h2>Campus Startup<br />Challenge</h2><span class="card-link">Explore <b>↗</b></span></div>
+          </article>
+
+          <article class="competition-card card-arena">
+            <span class="card-pin" aria-hidden="true"></span>
+            <div class="card-art arena-art" aria-hidden="true">
+              <span class="arena-ring"></span><span class="arena-star">✦</span>
+              <span class="art-caption">READY.<br />SET. CODE.</span>
+              <span class="art-index">04</span>
+            </div>
+            <div class="card-copy"><span class="category">CODE · CHAMPIONSHIP</span><h2>Code Arena<br />Championship</h2><span class="card-link">Explore <b>↗</b></span></div>
+          </article>
+
+          <article class="competition-card card-design">
+            <span class="card-pin" aria-hidden="true"></span>
+            <div class="card-art design-art" aria-hidden="true">
+              <span class="design-shape design-shape-one"></span><span class="design-shape design-shape-two"></span><span class="design-shape design-shape-three"></span>
+              <span class="art-caption">THINK<br />SIDEWAYS.</span>
+              <span class="art-index">05</span>
+            </div>
+            <div class="card-copy"><span class="category">DESIGN · INNOVATION</span><h2>Design &amp; Innovation<br />Sprint</h2><span class="card-link">Explore <b>↗</b></span></div>
+          </article>
+        </div>
+
+        <div class="organizer-strip" id="about">
+          <p class="organizer-heading">BUILT FOR THE NEXT GENERATION OF INNOVATORS</p>
+          <div class="organizer-content">
+            <div class="platform-lockup">
+              <img src="./Assets/Images/Favicon.svg" alt="" />
+              <span>CampusCode<small>STUDENT COMMUNITY</small></span>
+            </div>
+            <span class="organizer-divider" aria-hidden="true"></span>
+            <div class="platform-labels" id="arena">
+              <span><i class="platform-mark mark-code">&lt;/&gt;</i> CODE</span>
+              <span><i class="platform-mark mark-build">✳</i> BUILD</span>
+              <span><i class="platform-mark mark-create">◈</i> CREATE</span>
+              <span><i class="platform-mark mark-compete">↗</i> COMPETE</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="auth-overlay" id="auth-modal" aria-hidden="true">
+      <button class="auth-backdrop" type="button" data-auth-close tabindex="-1" aria-label="Close authentication dialog"></button>
+      <section class="auth-dialog" role="dialog" aria-modal="true" aria-labelledby="auth-title" aria-describedby="auth-description">
+        <button class="auth-close" type="button" data-auth-close aria-label="Close dialog">×</button>
+        <aside class="auth-aside">
+          <a class="brand auth-brand" href="#top" aria-label="CampusCode home">
+            <img src="./Assets/Images/Favicon.svg" alt="" />
+            <span>Campus<span class="brand-accent">Code</span></span>
+          </a>
+          <div class="auth-aside-copy">
+            <p class="auth-kicker"><span></span> YOUR NEXT CHALLENGE STARTS HERE</p>
+            <h2 id="auth-title">Ready to find<br />your <span>people?</span></h2>
+            <p id="auth-description">A place to explore your ideas, meet your team, and see what you're capable of.</p>
+          </div>
+          <div class="auth-illustration" aria-hidden="true">
+            <div class="illustration-orbit orbit-one"></div>
+            <div class="illustration-orbit orbit-two"></div>
+            <div class="illustration-card"><span>CC</span><b>TEAM<br />UP</b><i>✦</i></div>
+            <div class="illustration-person person-one"></div>
+            <div class="illustration-person person-two"></div>
+          </div>
+          <div class="auth-aside-footer"><span>BUILD · LEARN · COMPETE</span><span>01 — 05</span></div>
+        </aside>
+
+        <div class="auth-main">
+          <div class="auth-heading">
+            <p class="auth-mode-label" id="auth-mode-label">WELCOME BACK</p>
+            <h3 id="form-title">Log in to CampusCode</h3>
+            <p id="form-description">Good to see you again. Let's get back to it.</p>
+          </div>
+
+          <form class="auth-form" id="auth-form">
+            <div class="form-field register-field" hidden>
+              <label for="auth-name">Full name</label>
+              <input id="auth-name" name="name" type="text" autocomplete="name" placeholder="Your name" />
+            </div>
+            <div class="form-field">
+              <label for="auth-email">Email address</label>
+              <input id="auth-email" name="email" type="email" autocomplete="email" placeholder="you@university.edu" required />
+            </div>
+            <div class="form-field">
+              <div class="field-label-row">
+                <label for="auth-password">Password</label>
+                <a class="forgot-link" id="forgot-password" href="#auth-email">Forgot password?</a>
+              </div>
+              <div class="password-control">
+                <input id="auth-password" name="password" type="password" autocomplete="current-password" placeholder="Enter your password" minlength="8" required />
+                <button class="password-toggle" type="button" data-password-toggle="auth-password" aria-label="Show password" aria-pressed="false">Show</button>
+              </div>
+            </div>
+            <div class="form-field register-field" hidden>
+              <label for="auth-confirm-password">Confirm password</label>
+              <div class="password-control">
+                <input id="auth-confirm-password" name="confirm-password" type="password" autocomplete="new-password" placeholder="Enter your password again" minlength="8" />
+                <button class="password-toggle" type="button" data-password-toggle="auth-confirm-password" aria-label="Show confirm password" aria-pressed="false">Show</button>
+              </div>
+            </div>
+            <p class="auth-notice" id="auth-notice" role="status" aria-live="polite"></p>
+            <button class="button button-primary auth-submit" type="submit"><span id="auth-submit-label">Continue</span><span aria-hidden="true">↗</span></button>
+          </form>
+
+          <div class="auth-divider"><span>OR CONTINUE WITH</span></div>
+          <div class="social-options">
+            <button type="button" class="social-button" data-social="Google"><span class="google-mark">G</span>Google</button>
+            <button type="button" class="social-button" data-social="GitHub"><span class="github-mark">⌘</span>GitHub</button>
+          </div>
+          <p class="auth-switch"><span id="auth-switch-prompt">New to CampusCode?</span> <button type="button" id="auth-switch-button">Create an account</button></p>
+          <p class="auth-legal">By continuing, you agree to CampusCode's community guidelines.</p>
+        </div>
+      </section>
+    </div>
+
+    <script src="./Assets/JS/Landing.js" defer></script>
+  </body>
+</html>

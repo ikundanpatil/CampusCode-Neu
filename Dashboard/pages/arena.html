@@ -1,0 +1,633 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="CampusCode student competition workspace prototype">
+<title>CampusCode Arena — CampusCode</title>
+<link rel="icon" href="../assets/images/favicon.png">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body data-page="arena">
+<div class="app-shell">
+<aside class="sidebar "><div class="brand">
+<div class="brand-mark" aria-hidden="true">
+<span></span><span></span><span></span>
+</div>
+<div>
+<strong>CampusCode</strong><small>Student space</small>
+</div>
+<button class="sidebar-collapse-toggle" aria-label="Collapse sidebar" aria-expanded="true" data-action="toggle-sidebar"><svg aria-hidden="true" fill="none" height="18" viewbox="0 0 24 24" width="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></button><button class="mobile-close" aria-label="Close menu" data-action="close-drawer"><svg aria-hidden="true" fill="none" height="19" viewbox="0 0 24 24" width="19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="m6 6 12 12M18 6 6 18"></path></svg></button>
+</div>
+<div class="sidebar-label">Workspace</div>
+<nav class="main-nav" aria-label="Main navigation"><a class="" data-tooltip="Overview" href="../index.html" data-nav-link=""><svg aria-hidden="true" fill="none" height="18" viewbox="0 0 24 24" width="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect></svg><span>Overview</span></a><div class="workspace-nav-group is-expanded">
+<button class="workspace-parent group-active" data-tooltip="ARENA" aria-expanded="true"><svg aria-hidden="true" fill="none" height="18" viewbox="0 0 24 24" width="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="M12 3 20 6v5c0 5-3.4 8.3-8 10-4.6-1.7-8-5-8-10V6l8-3Zm-3 9 2 2 4-5"></path></svg><span>ARENA</span><span class="chevron"><svg aria-hidden="true" fill="none" height="16" viewbox="0 0 24 24" width="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="m8 10 4 4 4-4"></path></svg></span></button><div class="workspace-subnav">
+<a class="active" tabindex="0" href="../pages/arena.html" data-nav-link=""><span>Explore Arenas</span></a><a class="" tabindex="0" href="../pages/arena.html#leaderboard" data-nav-link=""><span>Leaderboard</span></a><a class="" tabindex="0" href="../pages/arena.html#achievements" data-nav-link=""><span>Badges &amp; Achievements</span></a><a class="" tabindex="0" href="../pages/arena.html#rank" data-nav-link=""><span>My Rank</span></a>
+</div>
+</div>
+<div class="workspace-nav-group is-expanded">
+<button class="workspace-parent " data-tooltip="Events" aria-expanded="true"><svg aria-hidden="true" fill="none" height="18" viewbox="0 0 24 24" width="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><rect x="3" y="5" width="18" height="16" rx="3"></rect><path d="M8 3v4M16 3v4M3 10h18"></path></svg><span>Events</span><span class="chevron"><svg aria-hidden="true" fill="none" height="16" viewbox="0 0 24 24" width="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="m8 10 4 4 4-4"></path></svg></span></button><div class="workspace-subnav">
+<a class="" tabindex="0" href="../pages/events.html" data-nav-link=""><span>Explore Events</span></a><a class="" tabindex="0" href="../pages/my-events.html" data-nav-link=""><span>My Events</span></a><a class="" tabindex="0" href="../pages/my-events.html#registered" data-nav-link=""><span>Registered Events</span></a>
+</div>
+</div>
+<div class="workspace-nav-group is-expanded">
+<button class="workspace-parent " data-tooltip="AI Tools" aria-expanded="true"><svg aria-hidden="true" fill="none" height="18" viewbox="0 0 24 24" width="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="m12 3 1.4 4.1L17.5 8.5l-4.1 1.4L12 14l-1.4-4.1-4.1-1.4 4.1-1.4L12 3Zm6 11 .8 2.2L21 17l-2.2.8L18 20l-.8-2.2L15 17l2.2-.8L18 14ZM6 14l.9 2.6 2.6.9-2.6.9L6 21l-.9-2.6-2.6-.9 2.6-.9L6 14Z"></path></svg><span>AI Tools</span><span class="chevron"><svg aria-hidden="true" fill="none" height="16" viewbox="0 0 24 24" width="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="m8 10 4 4 4-4"></path></svg></span></button><div class="workspace-subnav">
+<a class="" tabindex="0" href="../index.html" data-nav-link=""><span>StudyMate</span><small>Popular</small></a><a class="" tabindex="0" href="../index.html#ideacheck" data-nav-link=""><span>IdeaCheck</span></a><a class="" tabindex="0" href="../index.html" data-nav-link=""><span>RuleBot</span><small>New</small></a>
+</div>
+</div>
+<div class="workspace-nav-group ">
+<button class="workspace-parent " data-tooltip="Learning" aria-expanded="false"><svg aria-hidden="true" fill="none" height="18" viewbox="0 0 24 24" width="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"></path></svg><span>Learning</span><span class="chevron"><svg aria-hidden="true" fill="none" height="16" viewbox="0 0 24 24" width="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="m8 10 4 4 4-4"></path></svg></span></button><div class="workspace-subnav">
+<a class="" tabindex="-1" href="../index.html#courses" data-nav-link=""><span>My Courses</span></a><a class="" tabindex="-1" href="../pages/communication.html#help" data-nav-link=""><span>Student Guide</span></a><a class="" tabindex="-1" href="../pages/profile.html#achievements" data-nav-link=""><span>Certificates</span></a><a class="" tabindex="-1" href="../pages/profile.html" data-nav-link=""><span>Digital Card</span></a>
+</div>
+</div>
+<div class="workspace-nav-group ">
+<button class="workspace-parent " data-tooltip="Communication" aria-expanded="false"><svg aria-hidden="true" fill="none" height="18" viewbox="0 0 24 24" width="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"></path></svg><span>Communication</span><span class="chevron"><svg aria-hidden="true" fill="none" height="16" viewbox="0 0 24 24" width="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="m8 10 4 4 4-4"></path></svg></span></button><div class="workspace-subnav">
+<a class="" tabindex="-1" href="../pages/communication.html#official" data-nav-link=""><span>Official Updates</span></a><a class="" tabindex="-1" href="../pages/communication.html#notifications" data-nav-link=""><span>Notifications</span></a><a class="" tabindex="-1" href="../pages/communication.html#help" data-nav-link=""><span>Help &amp; Support</span></a>
+</div>
+</div></nav><div class="sidebar-account">
+<div class="sidebar-label">Account</div>
+<a class="profile sidebar-profile-button " data-tooltip="Profile" href="../pages/profile.html" data-nav-link=""><div class="avatar">AM</div>
+<div>
+<strong>Alex Morgan</strong><span>Student</span>
+</div></a><button class="logout-button" data-tooltip="Log out" data-action="demo-logout"><svg aria-hidden="true" fill="none" height="15" viewbox="0 0 24 24" width="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="M10 17l5-5-5-5M15 12H3M15 4h4a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-4"></path></svg> Log out</button>
+</div></aside><main><header class="topbar "><div class="header-page">
+<button class="menu-button" aria-label="Open menu" data-action="open-drawer"><svg aria-hidden="true" fill="none" height="19" viewbox="0 0 24 24" width="19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></button><div class="page-copy">
+<span>CampusCode / Student / CampusCode Arena</span><div>
+<strong>CampusCode Arena</strong><small>Enter challenges, earn verified XP, and build your competitive reputation.</small>
+</div>
+</div>
+</div>
+<div class="global-search"><label class="search-field"><svg aria-hidden="true" fill="none" height="17" viewbox="0 0 24 24" width="17" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4.5-4.5"></path></svg><input aria-label="Search CampusCode" aria-expanded="false" placeholder="Search events, courses, tools..." value=""><kbd><span>Ctrl</span> K</kbd></label></div>
+<div class="header-actions">
+<button class="mobile-search-button" aria-label="Open search"><svg aria-hidden="true" fill="none" height="18" viewbox="0 0 24 24" width="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4.5-4.5"></path></svg></button><div class="header-menu"><button class="header-icon-button" aria-label="Notifications" aria-expanded="false"><svg aria-hidden="true" fill="none" height="18" viewbox="0 0 24 24" width="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"></path></svg><i></i></button></div>
+<div class="header-menu help-control"><button class="header-icon-button" aria-label="Help and support" aria-expanded="false"><svg aria-hidden="true" fill="none" height="18" viewbox="0 0 24 24" width="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><circle cx="12" cy="12" r="9"></circle><path d="M9.6 9a2.5 2.5 0 1 1 3.2 2.4c-.8.3-.8 1-.8 1.6M12 17h.01"></path></svg></button></div>
+<div class="header-menu profile-control"><button class="profile-trigger" aria-label="Open profile menu" aria-expanded="false"><span class="avatar">AM</span><span class="profile-name"><strong>Alex Morgan</strong><small>Student</small></span><span class="profile-chevron"><svg aria-hidden="true" fill="none" height="15" viewbox="0 0 24 24" width="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="m8 10 4 4 4-4"></path></svg></span></button></div>
+</div></header><div class="dashboard"><div class="arena-page">
+<section class="arena-hero"><div class="arena-hero-copy">
+<span class="arena-kicker">Your competitive journey</span><h1>Prove Your Skills.<br><em>Earn Your Rank.</em>
+</h1>
+<p>Every challenge is an opportunity to grow. Enter arenas, compete with others, unlock achievements and build your reputation.</p>
+<div class="arena-hero-actions">
+<button>Explore Arenas <svg aria-hidden="true" fill="none" height="16" viewbox="0 0 24 24" width="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="M5 12h14m-5-5 5 5-5 5"></path></svg></button><button>View My Rank</button>
+</div>
+<small>All XP and ranks shown are demonstration data based on fictional verified achievements.</small>
+</div>
+<div class="arena-hero-visual" aria-hidden="true">
+<div class="arena-grid-lines"></div>
+<div class="arena-orbit orbit-one"></div>
+<div class="arena-orbit orbit-two"></div>
+<div class="arena-rank-core">
+<svg aria-hidden="true" fill="none" height="42" viewbox="0 0 24 24" width="42" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="M12 3 20 6v5c0 5-3.4 8.3-8 10-4.6-1.7-8-5-8-10V6l8-3Zm-3 9 2 2 4-5"></path></svg><span>Contender</span><strong>2,840 XP</strong>
+</div>
+<div class="arena-float arena-float-victory">
+<span>Victories</span><strong>03</strong>
+</div>
+<div class="arena-float arena-float-badges">
+<span>Badges</span><strong>04</strong>
+</div>
+</div>
+<div class="arena-hero-stats">
+<div>
+<span>Current rank</span><strong>Contender</strong>
+</div>
+<div>
+<span>Verified XP</span><strong>2,840</strong>
+</div>
+<div>
+<span>Next rank</span><strong>Elite</strong>
+</div>
+<div>
+<span>Competitions</span><strong>12</strong>
+</div>
+<div>
+<span>Victories</span><strong>03</strong>
+</div>
+<div>
+<span>Earned badges</span><strong>04</strong>
+</div>
+</div></section><section class="arena-discovery"><div class="arena-section-heading">
+<div>
+<span class="arena-kicker">Choose your field</span><h2>Competitive Arenas</h2>
+<p>Each arena tests a different combination of knowledge, execution, and competitive skill.</p>
+</div>
+<span>26 active opportunities</span>
+</div>
+<div class="arena-grid">
+<article class="arena-card code"><div class="arena-card-art">
+<span class="arena-card-icon"><svg aria-hidden="true" fill="none" height="25" viewbox="0 0 24 24" width="25" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect></svg></span><div class="arena-shape shape-a"></div>
+<div class="arena-shape shape-b"></div>
+<b>08</b>
+</div>
+<div class="arena-card-copy">
+<span>All levels</span><h3>Code Arena</h3>
+<p>Programming contests, algorithm challenges and competitive coding rounds.</p>
+<div>
+<small>8 competitions available</small><button>Explore Arena <svg aria-hidden="true" fill="none" height="15" viewbox="0 0 24 24" width="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="M5 12h14m-5-5 5 5-5 5"></path></svg></button>
+</div>
+</div></article><article class="arena-card ai"><div class="arena-card-art">
+<span class="arena-card-icon"><svg aria-hidden="true" fill="none" height="25" viewbox="0 0 24 24" width="25" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="m12 3 1.4 4.1L17.5 8.5l-4.1 1.4L12 14l-1.4-4.1-4.1-1.4 4.1-1.4L12 3Zm6 11 .8 2.2L21 17l-2.2.8L18 20l-.8-2.2L15 17l2.2-.8L18 14ZM6 14l.9 2.6 2.6.9-2.6.9L6 21l-.9-2.6-2.6-.9 2.6-.9L6 14Z"></path></svg></span><div class="arena-shape shape-a"></div>
+<div class="arena-shape shape-b"></div>
+<b>05</b>
+</div>
+<div class="arena-card-copy">
+<span>Intermediate–Advanced</span><h3>AI Arena</h3>
+<p>Artificial intelligence, machine learning and automation challenges.</p>
+<div>
+<small>5 competitions available</small><button>Explore Arena <svg aria-hidden="true" fill="none" height="15" viewbox="0 0 24 24" width="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="M5 12h14m-5-5 5 5-5 5"></path></svg></button>
+</div>
+</div></article><article class="arena-card innovation"><div class="arena-card-art">
+<span class="arena-card-icon"><svg aria-hidden="true" fill="none" height="25" viewbox="0 0 24 24" width="25" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><rect x="4" y="7" width="16" height="12" rx="3"></rect><path d="M12 3v4M9 12h.01M15 12h.01M9 16h6"></path></svg></span><div class="arena-shape shape-a"></div>
+<div class="arena-shape shape-b"></div>
+<b>07</b>
+</div>
+<div class="arena-card-copy">
+<span>Team challenges</span><h3>Innovation Arena</h3>
+<p>Hackathons, product-building challenges and original ideathons.</p>
+<div>
+<small>7 competitions available</small><button>Explore Arena <svg aria-hidden="true" fill="none" height="15" viewbox="0 0 24 24" width="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="M5 12h14m-5-5 5 5-5 5"></path></svg></button>
+</div>
+</div></article><article class="arena-card knowledge"><div class="arena-card-art">
+<span class="arena-card-icon"><svg aria-hidden="true" fill="none" height="25" viewbox="0 0 24 24" width="25" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><circle cx="12" cy="12" r="9"></circle><path d="M9.6 9a2.5 2.5 0 1 1 3.2 2.4c-.8.3-.8 1-.8 1.6M12 17h.01"></path></svg></span><div class="arena-shape shape-a"></div>
+<div class="arena-shape shape-b"></div>
+<b>06</b>
+</div>
+<div class="arena-card-copy">
+<span>Beginner–Expert</span><h3>Knowledge Arena</h3>
+<p>Technical quizzes, assessments and knowledge-based competitions.</p>
+<div>
+<small>6 competitions available</small><button>Explore Arena <svg aria-hidden="true" fill="none" height="15" viewbox="0 0 24 24" width="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="M5 12h14m-5-5 5 5-5 5"></path></svg></button>
+</div>
+</div></article>
+</div></section><section class="rank-progression"><div class="rank-heading">
+<div>
+<span class="arena-kicker">Verified progression</span><h2>Contender Rank</h2>
+<p>Competitive XP is awarded only for verified results, completed challenge stages, and evaluated achievements.</p>
+</div>
+<div class="current-rank-emblem">
+<svg aria-hidden="true" fill="none" height="30" viewbox="0 0 24 24" width="30" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="M12 3 20 6v5c0 5-3.4 8.3-8 10-4.6-1.7-8-5-8-10V6l8-3Zm-3 9 2 2 4-5"></path></svg><span>Rank 04</span>
+</div>
+</div>
+<div class="rank-xp-row">
+<div>
+<span>Current XP</span><strong>2,840</strong>
+</div>
+<div class="rank-progress-track">
+<span class="progress-width-71"></span><i>71%</i>
+</div>
+<div>
+<span>Elite unlocks at</span><strong>4,000 XP</strong>
+</div>
+</div>
+<div class="rank-levels">
+<div class="complete">
+<span><svg aria-hidden="true" fill="none" height="12" viewbox="0 0 24 24" width="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="m5 12 4 4L19 6"></path></svg></span><small>Rookie</small>
+</div>
+<div class="complete">
+<span><svg aria-hidden="true" fill="none" height="12" viewbox="0 0 24 24" width="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="m5 12 4 4L19 6"></path></svg></span><small>Challenger</small>
+</div>
+<div class="current">
+<span>3</span><small>Contender</small>
+</div>
+<div class="">
+<span>4</span><small>Elite</small>
+</div>
+<div class="">
+<span>5</span><small>Master</small>
+</div>
+<div class="">
+<span>6</span><small>Legend</small>
+</div>
+</div>
+<div class="next-rank-preview">
+<span><svg aria-hidden="true" fill="none" height="18" viewbox="0 0 24 24" width="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><circle cx="12" cy="8" r="5"></circle><path d="m8.5 12-1 9 4.5-2 4.5 2-1-9"></path></svg></span><div>
+<small>Next rank</small><strong>Elite</strong><p>Recognized for repeated high-level placements across multiple arenas.</p>
+</div>
+<b>1,160 XP to go</b>
+</div></section><section class="arena-challenges"><div class="arena-section-heading">
+<div>
+<span class="arena-kicker">Compete now</span><h2>Active Arena Challenges</h2>
+<p>Complete evaluated challenges to earn verified competitive XP.</p>
+</div>
+<button>View all events <svg aria-hidden="true" fill="none" height="15" viewbox="0 0 24 24" width="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="M5 12h14m-5-5 5 5-5 5"></path></svg></button>
+</div>
+<div class="arena-challenge-grid">
+<article class="code"><div class="challenge-top">
+<span>Code Arena</span><b>+420 XP</b>
+</div>
+<h3>National Coding Challenge</h3>
+<div class="challenge-data">
+<div>
+<span>Difficulty</span><strong>Intermediate</strong>
+</div>
+<div>
+<span>Deadline</span><strong>20 November 2026</strong>
+</div>
+</div>
+<p>Verified student · Individual entry</p>
+<button>View Challenge <svg aria-hidden="true" fill="none" height="15" viewbox="0 0 24 24" width="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="M5 12h14m-5-5 5 5-5 5"></path></svg></button></article><article class="ai"><div class="challenge-top">
+<span>AI Arena</span><b>+680 XP</b>
+</div>
+<h3>AI Innovation Challenge</h3>
+<div class="challenge-data">
+<div>
+<span>Difficulty</span><strong>Advanced</strong>
+</div>
+<div>
+<span>Deadline</span><strong>28 November 2026</strong>
+</div>
+</div>
+<p>Team of 2–5 · Prototype required</p>
+<button>View Challenge <svg aria-hidden="true" fill="none" height="15" viewbox="0 0 24 24" width="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="M5 12h14m-5-5 5 5-5 5"></path></svg></button></article><article class="innovation"><div class="challenge-top">
+<span>Innovation Arena</span><b>+550 XP</b>
+</div>
+<h3>Campus Innovation Hackathon</h3>
+<div class="challenge-data">
+<div>
+<span>Difficulty</span><strong>Intermediate</strong>
+</div>
+<div>
+<span>Deadline</span><strong>25 November 2026</strong>
+</div>
+</div>
+<p>Team of 2–4 · Open entry</p>
+<button>View Challenge <svg aria-hidden="true" fill="none" height="15" viewbox="0 0 24 24" width="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="M5 12h14m-5-5 5 5-5 5"></path></svg></button></article>
+</div></section><div class="arena-preview-grid">
+<section class="leaderboard-preview"><div class="arena-section-heading compact">
+<div>
+<span class="arena-kicker">Demonstration rankings</span><h2>Top Competitors</h2>
+</div>
+<button>View Full Leaderboard <svg aria-hidden="true" fill="none" height="15" viewbox="0 0 24 24" width="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="M5 12h14m-5-5 5 5-5 5"></path></svg></button>
+</div>
+<div class="leaderboard-preview-list">
+<div class="">
+<span>1</span><b>RS</b><p><strong>Riya Shah</strong><small>Master</small></p>
+<em>8,940 XP</em>
+</div>
+<div class="">
+<span>2</span><b>DM</b><p><strong>Dev Mehta</strong><small>Master</small></p>
+<em>8,420 XP</em>
+</div>
+<div class="">
+<span>3</span><b>SK</b><p><strong>Sara Khan</strong><small>Elite</small></p>
+<em>7,860 XP</em>
+</div>
+<div class="current-student">
+<span>4</span><b>AM</b><p><strong>Alex Morgan</strong><small>Contender</small></p>
+<em>2,840 XP</em>
+</div>
+<div class="">
+<span>5</span><b>KN</b><p><strong>Kabir Nair</strong><small>Contender</small></p>
+<em>2,710 XP</em>
+</div>
+</div>
+<small class="prototype-label">Prototype leaderboard data. Production ranks must use verified evaluated results.</small></section><section class="achievement-preview"><div class="arena-section-heading compact">
+<div>
+<span class="arena-kicker">Collect your legacy</span><h2>Unlocked Achievements</h2>
+</div>
+<button>View all <svg aria-hidden="true" fill="none" height="15" viewbox="0 0 24 24" width="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="M5 12h14m-5-5 5 5-5 5"></path></svg></button>
+</div>
+<div class="arena-achievement-grid">
+<button class="arena-achievement unlocked aqua"><span class="achievement-emblem"><svg aria-hidden="true" fill="none" height="25" viewbox="0 0 24 24" width="25" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><circle cx="12" cy="8" r="5"></circle><path d="m8.5 12-1 9 4.5-2 4.5 2-1-9"></path></svg></span><strong>First Victory</strong><small>Unlocked</small><p>Win your first verified CampusCode competition.</p></button><button class="arena-achievement unlocked indigo"><span class="achievement-emblem"><svg aria-hidden="true" fill="none" height="25" viewbox="0 0 24 24" width="25" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect></svg></span><strong>Coding Specialist</strong><small>Unlocked</small><p>Demonstrate consistent excellence in coding contests.</p></button><button class="arena-achievement unlocked violet"><span class="achievement-emblem"><svg aria-hidden="true" fill="none" height="25" viewbox="0 0 24 24" width="25" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="m12 3 1.4 4.1L17.5 8.5l-4.1 1.4L12 14l-1.4-4.1-4.1-1.4 4.1-1.4L12 3Zm6 11 .8 2.2L21 17l-2.2.8L18 20l-.8-2.2L15 17l2.2-.8L18 14ZM6 14l.9 2.6 2.6.9-2.6.9L6 21l-.9-2.6-2.6-.9 2.6-.9L6 14Z"></path></svg></span><strong>AI Explorer</strong><small>Unlocked</small><p>Build and submit an original artificial intelligence solution.</p></button><button class="arena-achievement unlocked blue"><span class="achievement-emblem"><svg aria-hidden="true" fill="none" height="25" viewbox="0 0 24 24" width="25" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="M12 3 20 6v5c0 5-3.4 8.3-8 10-4.6-1.7-8-5-8-10V6l8-3Zm-3 9 2 2 4-5"></path></svg></span><strong>Hackathon Champion</strong><small>Unlocked</small><p>Reach the top position in a verified hackathon.</p></button><button class="arena-achievement locked"><span class="achievement-emblem"><svg aria-hidden="true" fill="none" height="25" viewbox="0 0 24 24" width="25" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><circle cx="12" cy="8" r="5"></circle><path d="m8.5 12-1 9 4.5-2 4.5 2-1-9"></path></svg></span><strong>Top 10 Competitor</strong><small>Locked</small><p>Reach the top ten on the verified CampusCode leaderboard.</p></button>
+</div></section>
+</div>
+</div></div></main>
+</div>
+<template id="arena-explore-template"><div class="arena-page">
+<section class="arena-hero"><div class="arena-hero-copy">
+<span class="arena-kicker">Your competitive journey</span><h1>Prove Your Skills.<br><em>Earn Your Rank.</em>
+</h1>
+<p>Every challenge is an opportunity to grow. Enter arenas, compete with others, unlock achievements and build your reputation.</p>
+<div class="arena-hero-actions">
+<button>Explore Arenas <svg aria-hidden="true" fill="none" height="16" viewbox="0 0 24 24" width="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="M5 12h14m-5-5 5 5-5 5"></path></svg></button><button>View My Rank</button>
+</div>
+<small>All XP and ranks shown are demonstration data based on fictional verified achievements.</small>
+</div>
+<div class="arena-hero-visual" aria-hidden="true">
+<div class="arena-grid-lines"></div>
+<div class="arena-orbit orbit-one"></div>
+<div class="arena-orbit orbit-two"></div>
+<div class="arena-rank-core">
+<svg aria-hidden="true" fill="none" height="42" viewbox="0 0 24 24" width="42" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="M12 3 20 6v5c0 5-3.4 8.3-8 10-4.6-1.7-8-5-8-10V6l8-3Zm-3 9 2 2 4-5"></path></svg><span>Contender</span><strong>2,840 XP</strong>
+</div>
+<div class="arena-float arena-float-victory">
+<span>Victories</span><strong>03</strong>
+</div>
+<div class="arena-float arena-float-badges">
+<span>Badges</span><strong>04</strong>
+</div>
+</div>
+<div class="arena-hero-stats">
+<div>
+<span>Current rank</span><strong>Contender</strong>
+</div>
+<div>
+<span>Verified XP</span><strong>2,840</strong>
+</div>
+<div>
+<span>Next rank</span><strong>Elite</strong>
+</div>
+<div>
+<span>Competitions</span><strong>12</strong>
+</div>
+<div>
+<span>Victories</span><strong>03</strong>
+</div>
+<div>
+<span>Earned badges</span><strong>04</strong>
+</div>
+</div></section><section class="arena-discovery"><div class="arena-section-heading">
+<div>
+<span class="arena-kicker">Choose your field</span><h2>Competitive Arenas</h2>
+<p>Each arena tests a different combination of knowledge, execution, and competitive skill.</p>
+</div>
+<span>26 active opportunities</span>
+</div>
+<div class="arena-grid">
+<article class="arena-card code"><div class="arena-card-art">
+<span class="arena-card-icon"><svg aria-hidden="true" fill="none" height="25" viewbox="0 0 24 24" width="25" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect></svg></span><div class="arena-shape shape-a"></div>
+<div class="arena-shape shape-b"></div>
+<b>08</b>
+</div>
+<div class="arena-card-copy">
+<span>All levels</span><h3>Code Arena</h3>
+<p>Programming contests, algorithm challenges and competitive coding rounds.</p>
+<div>
+<small>8 competitions available</small><button>Explore Arena <svg aria-hidden="true" fill="none" height="15" viewbox="0 0 24 24" width="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="M5 12h14m-5-5 5 5-5 5"></path></svg></button>
+</div>
+</div></article><article class="arena-card ai"><div class="arena-card-art">
+<span class="arena-card-icon"><svg aria-hidden="true" fill="none" height="25" viewbox="0 0 24 24" width="25" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="m12 3 1.4 4.1L17.5 8.5l-4.1 1.4L12 14l-1.4-4.1-4.1-1.4 4.1-1.4L12 3Zm6 11 .8 2.2L21 17l-2.2.8L18 20l-.8-2.2L15 17l2.2-.8L18 14ZM6 14l.9 2.6 2.6.9-2.6.9L6 21l-.9-2.6-2.6-.9 2.6-.9L6 14Z"></path></svg></span><div class="arena-shape shape-a"></div>
+<div class="arena-shape shape-b"></div>
+<b>05</b>
+</div>
+<div class="arena-card-copy">
+<span>Intermediate–Advanced</span><h3>AI Arena</h3>
+<p>Artificial intelligence, machine learning and automation challenges.</p>
+<div>
+<small>5 competitions available</small><button>Explore Arena <svg aria-hidden="true" fill="none" height="15" viewbox="0 0 24 24" width="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="M5 12h14m-5-5 5 5-5 5"></path></svg></button>
+</div>
+</div></article><article class="arena-card innovation"><div class="arena-card-art">
+<span class="arena-card-icon"><svg aria-hidden="true" fill="none" height="25" viewbox="0 0 24 24" width="25" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><rect x="4" y="7" width="16" height="12" rx="3"></rect><path d="M12 3v4M9 12h.01M15 12h.01M9 16h6"></path></svg></span><div class="arena-shape shape-a"></div>
+<div class="arena-shape shape-b"></div>
+<b>07</b>
+</div>
+<div class="arena-card-copy">
+<span>Team challenges</span><h3>Innovation Arena</h3>
+<p>Hackathons, product-building challenges and original ideathons.</p>
+<div>
+<small>7 competitions available</small><button>Explore Arena <svg aria-hidden="true" fill="none" height="15" viewbox="0 0 24 24" width="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="M5 12h14m-5-5 5 5-5 5"></path></svg></button>
+</div>
+</div></article><article class="arena-card knowledge"><div class="arena-card-art">
+<span class="arena-card-icon"><svg aria-hidden="true" fill="none" height="25" viewbox="0 0 24 24" width="25" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><circle cx="12" cy="12" r="9"></circle><path d="M9.6 9a2.5 2.5 0 1 1 3.2 2.4c-.8.3-.8 1-.8 1.6M12 17h.01"></path></svg></span><div class="arena-shape shape-a"></div>
+<div class="arena-shape shape-b"></div>
+<b>06</b>
+</div>
+<div class="arena-card-copy">
+<span>Beginner–Expert</span><h3>Knowledge Arena</h3>
+<p>Technical quizzes, assessments and knowledge-based competitions.</p>
+<div>
+<small>6 competitions available</small><button>Explore Arena <svg aria-hidden="true" fill="none" height="15" viewbox="0 0 24 24" width="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="M5 12h14m-5-5 5 5-5 5"></path></svg></button>
+</div>
+</div></article>
+</div></section><section class="rank-progression"><div class="rank-heading">
+<div>
+<span class="arena-kicker">Verified progression</span><h2>Contender Rank</h2>
+<p>Competitive XP is awarded only for verified results, completed challenge stages, and evaluated achievements.</p>
+</div>
+<div class="current-rank-emblem">
+<svg aria-hidden="true" fill="none" height="30" viewbox="0 0 24 24" width="30" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="M12 3 20 6v5c0 5-3.4 8.3-8 10-4.6-1.7-8-5-8-10V6l8-3Zm-3 9 2 2 4-5"></path></svg><span>Rank 04</span>
+</div>
+</div>
+<div class="rank-xp-row">
+<div>
+<span>Current XP</span><strong>2,840</strong>
+</div>
+<div class="rank-progress-track">
+<span class="progress-width-71"></span><i>71%</i>
+</div>
+<div>
+<span>Elite unlocks at</span><strong>4,000 XP</strong>
+</div>
+</div>
+<div class="rank-levels">
+<div class="complete">
+<span><svg aria-hidden="true" fill="none" height="12" viewbox="0 0 24 24" width="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="m5 12 4 4L19 6"></path></svg></span><small>Rookie</small>
+</div>
+<div class="complete">
+<span><svg aria-hidden="true" fill="none" height="12" viewbox="0 0 24 24" width="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="m5 12 4 4L19 6"></path></svg></span><small>Challenger</small>
+</div>
+<div class="current">
+<span>3</span><small>Contender</small>
+</div>
+<div class="">
+<span>4</span><small>Elite</small>
+</div>
+<div class="">
+<span>5</span><small>Master</small>
+</div>
+<div class="">
+<span>6</span><small>Legend</small>
+</div>
+</div>
+<div class="next-rank-preview">
+<span><svg aria-hidden="true" fill="none" height="18" viewbox="0 0 24 24" width="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><circle cx="12" cy="8" r="5"></circle><path d="m8.5 12-1 9 4.5-2 4.5 2-1-9"></path></svg></span><div>
+<small>Next rank</small><strong>Elite</strong><p>Recognized for repeated high-level placements across multiple arenas.</p>
+</div>
+<b>1,160 XP to go</b>
+</div></section><section class="arena-challenges"><div class="arena-section-heading">
+<div>
+<span class="arena-kicker">Compete now</span><h2>Active Arena Challenges</h2>
+<p>Complete evaluated challenges to earn verified competitive XP.</p>
+</div>
+<button>View all events <svg aria-hidden="true" fill="none" height="15" viewbox="0 0 24 24" width="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="M5 12h14m-5-5 5 5-5 5"></path></svg></button>
+</div>
+<div class="arena-challenge-grid">
+<article class="code"><div class="challenge-top">
+<span>Code Arena</span><b>+420 XP</b>
+</div>
+<h3>National Coding Challenge</h3>
+<div class="challenge-data">
+<div>
+<span>Difficulty</span><strong>Intermediate</strong>
+</div>
+<div>
+<span>Deadline</span><strong>20 November 2026</strong>
+</div>
+</div>
+<p>Verified student · Individual entry</p>
+<button>View Challenge <svg aria-hidden="true" fill="none" height="15" viewbox="0 0 24 24" width="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="M5 12h14m-5-5 5 5-5 5"></path></svg></button></article><article class="ai"><div class="challenge-top">
+<span>AI Arena</span><b>+680 XP</b>
+</div>
+<h3>AI Innovation Challenge</h3>
+<div class="challenge-data">
+<div>
+<span>Difficulty</span><strong>Advanced</strong>
+</div>
+<div>
+<span>Deadline</span><strong>28 November 2026</strong>
+</div>
+</div>
+<p>Team of 2–5 · Prototype required</p>
+<button>View Challenge <svg aria-hidden="true" fill="none" height="15" viewbox="0 0 24 24" width="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="M5 12h14m-5-5 5 5-5 5"></path></svg></button></article><article class="innovation"><div class="challenge-top">
+<span>Innovation Arena</span><b>+550 XP</b>
+</div>
+<h3>Campus Innovation Hackathon</h3>
+<div class="challenge-data">
+<div>
+<span>Difficulty</span><strong>Intermediate</strong>
+</div>
+<div>
+<span>Deadline</span><strong>25 November 2026</strong>
+</div>
+</div>
+<p>Team of 2–4 · Open entry</p>
+<button>View Challenge <svg aria-hidden="true" fill="none" height="15" viewbox="0 0 24 24" width="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="M5 12h14m-5-5 5 5-5 5"></path></svg></button></article>
+</div></section><div class="arena-preview-grid">
+<section class="leaderboard-preview"><div class="arena-section-heading compact">
+<div>
+<span class="arena-kicker">Demonstration rankings</span><h2>Top Competitors</h2>
+</div>
+<button>View Full Leaderboard <svg aria-hidden="true" fill="none" height="15" viewbox="0 0 24 24" width="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="M5 12h14m-5-5 5 5-5 5"></path></svg></button>
+</div>
+<div class="leaderboard-preview-list">
+<div class="">
+<span>1</span><b>RS</b><p><strong>Riya Shah</strong><small>Master</small></p>
+<em>8,940 XP</em>
+</div>
+<div class="">
+<span>2</span><b>DM</b><p><strong>Dev Mehta</strong><small>Master</small></p>
+<em>8,420 XP</em>
+</div>
+<div class="">
+<span>3</span><b>SK</b><p><strong>Sara Khan</strong><small>Elite</small></p>
+<em>7,860 XP</em>
+</div>
+<div class="current-student">
+<span>4</span><b>AM</b><p><strong>Alex Morgan</strong><small>Contender</small></p>
+<em>2,840 XP</em>
+</div>
+<div class="">
+<span>5</span><b>KN</b><p><strong>Kabir Nair</strong><small>Contender</small></p>
+<em>2,710 XP</em>
+</div>
+</div>
+<small class="prototype-label">Prototype leaderboard data. Production ranks must use verified evaluated results.</small></section><section class="achievement-preview"><div class="arena-section-heading compact">
+<div>
+<span class="arena-kicker">Collect your legacy</span><h2>Unlocked Achievements</h2>
+</div>
+<button>View all <svg aria-hidden="true" fill="none" height="15" viewbox="0 0 24 24" width="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="M5 12h14m-5-5 5 5-5 5"></path></svg></button>
+</div>
+<div class="arena-achievement-grid">
+<button class="arena-achievement unlocked aqua"><span class="achievement-emblem"><svg aria-hidden="true" fill="none" height="25" viewbox="0 0 24 24" width="25" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><circle cx="12" cy="8" r="5"></circle><path d="m8.5 12-1 9 4.5-2 4.5 2-1-9"></path></svg></span><strong>First Victory</strong><small>Unlocked</small><p>Win your first verified CampusCode competition.</p></button><button class="arena-achievement unlocked indigo"><span class="achievement-emblem"><svg aria-hidden="true" fill="none" height="25" viewbox="0 0 24 24" width="25" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect></svg></span><strong>Coding Specialist</strong><small>Unlocked</small><p>Demonstrate consistent excellence in coding contests.</p></button><button class="arena-achievement unlocked violet"><span class="achievement-emblem"><svg aria-hidden="true" fill="none" height="25" viewbox="0 0 24 24" width="25" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="m12 3 1.4 4.1L17.5 8.5l-4.1 1.4L12 14l-1.4-4.1-4.1-1.4 4.1-1.4L12 3Zm6 11 .8 2.2L21 17l-2.2.8L18 20l-.8-2.2L15 17l2.2-.8L18 14ZM6 14l.9 2.6 2.6.9-2.6.9L6 21l-.9-2.6-2.6-.9 2.6-.9L6 14Z"></path></svg></span><strong>AI Explorer</strong><small>Unlocked</small><p>Build and submit an original artificial intelligence solution.</p></button><button class="arena-achievement unlocked blue"><span class="achievement-emblem"><svg aria-hidden="true" fill="none" height="25" viewbox="0 0 24 24" width="25" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="M12 3 20 6v5c0 5-3.4 8.3-8 10-4.6-1.7-8-5-8-10V6l8-3Zm-3 9 2 2 4-5"></path></svg></span><strong>Hackathon Champion</strong><small>Unlocked</small><p>Reach the top position in a verified hackathon.</p></button><button class="arena-achievement locked"><span class="achievement-emblem"><svg aria-hidden="true" fill="none" height="25" viewbox="0 0 24 24" width="25" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><circle cx="12" cy="8" r="5"></circle><path d="m8.5 12-1 9 4.5-2 4.5 2-1-9"></path></svg></span><strong>Top 10 Competitor</strong><small>Locked</small><p>Reach the top ten on the verified CampusCode leaderboard.</p></button>
+</div></section>
+</div>
+</div></template><template id="arena-leaderboard-template"><div class="arena-page">
+<section class="arena-subpage-intro"><div>
+<span class="arena-kicker">CampusCode Arena</span><h1>Leaderboard</h1>
+<p>See how verified competitors are progressing across CampusCode.</p>
+</div>
+<button><svg aria-hidden="true" fill="none" height="15" viewbox="0 0 24 24" width="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="M5 12h14m-5-5 5 5-5 5"></path></svg> Back to Arena</button></section><section class="arena-full-panel"><div class="arena-section-heading">
+<div>
+<span class="arena-kicker">Verified competition performance</span><h2>Season Leaderboard</h2>
+<p>Rankings shown below are fictional demonstration data for the CampusCode prototype.</p>
+</div>
+<span>Season 01 · Prototype</span>
+</div>
+<div class="arena-leaderboard">
+<div class="leaderboard-labels">
+<span>Rank &amp; competitor</span><span>Level</span><span>Verified XP</span><span>Achievement</span>
+</div>
+<div class="">
+<span class="leaderboard-position position-1">01</span><span class="leaderboard-avatar">RS</span><span class="leaderboard-name"><strong>Riya Shah</strong></span><span class="leaderboard-level">Master</span><strong class="leaderboard-xp">8,940</strong><span class="leaderboard-achievement"><svg aria-hidden="true" fill="none" height="14" viewbox="0 0 24 24" width="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><circle cx="12" cy="8" r="5"></circle><path d="m8.5 12-1 9 4.5-2 4.5 2-1-9"></path></svg>12 wins</span>
+</div>
+<div class="">
+<span class="leaderboard-position position-2">02</span><span class="leaderboard-avatar">DM</span><span class="leaderboard-name"><strong>Dev Mehta</strong></span><span class="leaderboard-level">Master</span><strong class="leaderboard-xp">8,420</strong><span class="leaderboard-achievement"><svg aria-hidden="true" fill="none" height="14" viewbox="0 0 24 24" width="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><circle cx="12" cy="8" r="5"></circle><path d="m8.5 12-1 9 4.5-2 4.5 2-1-9"></path></svg>10 wins</span>
+</div>
+<div class="">
+<span class="leaderboard-position position-3">03</span><span class="leaderboard-avatar">SK</span><span class="leaderboard-name"><strong>Sara Khan</strong></span><span class="leaderboard-level">Elite</span><strong class="leaderboard-xp">7,860</strong><span class="leaderboard-achievement"><svg aria-hidden="true" fill="none" height="14" viewbox="0 0 24 24" width="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><circle cx="12" cy="8" r="5"></circle><path d="m8.5 12-1 9 4.5-2 4.5 2-1-9"></path></svg>9 wins</span>
+</div>
+<div class="current-student">
+<span class="leaderboard-position position-4">04</span><span class="leaderboard-avatar">AM</span><span class="leaderboard-name"><strong>Alex Morgan</strong><small>You</small></span><span class="leaderboard-level">Contender</span><strong class="leaderboard-xp">2,840</strong><span class="leaderboard-achievement"><svg aria-hidden="true" fill="none" height="14" viewbox="0 0 24 24" width="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><circle cx="12" cy="8" r="5"></circle><path d="m8.5 12-1 9 4.5-2 4.5 2-1-9"></path></svg>3 wins</span>
+</div>
+<div class="">
+<span class="leaderboard-position position-5">05</span><span class="leaderboard-avatar">KN</span><span class="leaderboard-name"><strong>Kabir Nair</strong></span><span class="leaderboard-level">Contender</span><strong class="leaderboard-xp">2,710</strong><span class="leaderboard-achievement"><svg aria-hidden="true" fill="none" height="14" viewbox="0 0 24 24" width="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><circle cx="12" cy="8" r="5"></circle><path d="m8.5 12-1 9 4.5-2 4.5 2-1-9"></path></svg>4 wins</span>
+</div>
+<div class="">
+<span class="leaderboard-position position-6">06</span><span class="leaderboard-avatar">IP</span><span class="leaderboard-name"><strong>Isha Patel</strong></span><span class="leaderboard-level">Contender</span><strong class="leaderboard-xp">2,580</strong><span class="leaderboard-achievement"><svg aria-hidden="true" fill="none" height="14" viewbox="0 0 24 24" width="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><circle cx="12" cy="8" r="5"></circle><path d="m8.5 12-1 9 4.5-2 4.5 2-1-9"></path></svg>3 wins</span>
+</div>
+<div class="">
+<span class="leaderboard-position position-7">07</span><span class="leaderboard-avatar">AR</span><span class="leaderboard-name"><strong>Arjun Rao</strong></span><span class="leaderboard-level">Challenger</span><strong class="leaderboard-xp">2,260</strong><span class="leaderboard-achievement"><svg aria-hidden="true" fill="none" height="14" viewbox="0 0 24 24" width="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><circle cx="12" cy="8" r="5"></circle><path d="m8.5 12-1 9 4.5-2 4.5 2-1-9"></path></svg>2 wins</span>
+</div>
+<div class="">
+<span class="leaderboard-position position-8">08</span><span class="leaderboard-avatar">MN</span><span class="leaderboard-name"><strong>Meera Nair</strong></span><span class="leaderboard-level">Challenger</span><strong class="leaderboard-xp">2,140</strong><span class="leaderboard-achievement"><svg aria-hidden="true" fill="none" height="14" viewbox="0 0 24 24" width="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><circle cx="12" cy="8" r="5"></circle><path d="m8.5 12-1 9 4.5-2 4.5 2-1-9"></path></svg>2 wins</span>
+</div>
+</div></section>
+</div></template><template id="arena-achievements-template"><div class="arena-page">
+<section class="arena-subpage-intro"><div>
+<span class="arena-kicker">CampusCode Arena</span><h1>Badges &amp; Achievements</h1>
+<p>Review collectible achievements earned through verified competition results.</p>
+</div>
+<button><svg aria-hidden="true" fill="none" height="15" viewbox="0 0 24 24" width="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="M5 12h14m-5-5 5 5-5 5"></path></svg> Back to Arena</button></section><section class="arena-full-panel"><div class="arena-section-heading">
+<div>
+<span class="arena-kicker">Achievement collection</span><h2>Your Competitive Legacy</h2>
+<p>Open any badge to review its verified unlock requirement.</p>
+</div>
+<span>4 of 5 unlocked</span>
+</div>
+<div class="arena-achievement-grid">
+<button class="arena-achievement unlocked aqua"><span class="achievement-emblem"><svg aria-hidden="true" fill="none" height="25" viewbox="0 0 24 24" width="25" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><circle cx="12" cy="8" r="5"></circle><path d="m8.5 12-1 9 4.5-2 4.5 2-1-9"></path></svg></span><strong>First Victory</strong><small>Unlocked</small><p>Win your first verified CampusCode competition.</p></button><button class="arena-achievement unlocked indigo"><span class="achievement-emblem"><svg aria-hidden="true" fill="none" height="25" viewbox="0 0 24 24" width="25" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect></svg></span><strong>Coding Specialist</strong><small>Unlocked</small><p>Demonstrate consistent excellence in coding contests.</p></button><button class="arena-achievement unlocked violet"><span class="achievement-emblem"><svg aria-hidden="true" fill="none" height="25" viewbox="0 0 24 24" width="25" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="m12 3 1.4 4.1L17.5 8.5l-4.1 1.4L12 14l-1.4-4.1-4.1-1.4 4.1-1.4L12 3Zm6 11 .8 2.2L21 17l-2.2.8L18 20l-.8-2.2L15 17l2.2-.8L18 14ZM6 14l.9 2.6 2.6.9-2.6.9L6 21l-.9-2.6-2.6-.9 2.6-.9L6 14Z"></path></svg></span><strong>AI Explorer</strong><small>Unlocked</small><p>Build and submit an original artificial intelligence solution.</p></button><button class="arena-achievement unlocked blue"><span class="achievement-emblem"><svg aria-hidden="true" fill="none" height="25" viewbox="0 0 24 24" width="25" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="M12 3 20 6v5c0 5-3.4 8.3-8 10-4.6-1.7-8-5-8-10V6l8-3Zm-3 9 2 2 4-5"></path></svg></span><strong>Hackathon Champion</strong><small>Unlocked</small><p>Reach the top position in a verified hackathon.</p></button><button class="arena-achievement locked"><span class="achievement-emblem"><svg aria-hidden="true" fill="none" height="25" viewbox="0 0 24 24" width="25" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><circle cx="12" cy="8" r="5"></circle><path d="m8.5 12-1 9 4.5-2 4.5 2-1-9"></path></svg></span><strong>Top 10 Competitor</strong><small>Locked</small><p>Reach the top ten on the verified CampusCode leaderboard.</p></button>
+</div></section>
+</div></template><template id="arena-rank-template"><div class="arena-page">
+<section class="arena-subpage-intro"><div>
+<span class="arena-kicker">CampusCode Arena</span><h1>My Rank</h1>
+<p>Track verified XP and your path to the next competitive rank.</p>
+</div>
+<button><svg aria-hidden="true" fill="none" height="15" viewbox="0 0 24 24" width="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="M5 12h14m-5-5 5 5-5 5"></path></svg> Back to Arena</button></section><section class="rank-progression"><div class="rank-heading">
+<div>
+<span class="arena-kicker">Verified progression</span><h2>Contender Rank</h2>
+<p>Competitive XP is awarded only for verified results, completed challenge stages, and evaluated achievements.</p>
+</div>
+<div class="current-rank-emblem">
+<svg aria-hidden="true" fill="none" height="30" viewbox="0 0 24 24" width="30" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="M12 3 20 6v5c0 5-3.4 8.3-8 10-4.6-1.7-8-5-8-10V6l8-3Zm-3 9 2 2 4-5"></path></svg><span>Rank 04</span>
+</div>
+</div>
+<div class="rank-xp-row">
+<div>
+<span>Current XP</span><strong>2,840</strong>
+</div>
+<div class="rank-progress-track">
+<span class="progress-width-71"></span><i>71%</i>
+</div>
+<div>
+<span>Elite unlocks at</span><strong>4,000 XP</strong>
+</div>
+</div>
+<div class="rank-levels">
+<div class="complete">
+<span><svg aria-hidden="true" fill="none" height="12" viewbox="0 0 24 24" width="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="m5 12 4 4L19 6"></path></svg></span><small>Rookie</small>
+</div>
+<div class="complete">
+<span><svg aria-hidden="true" fill="none" height="12" viewbox="0 0 24 24" width="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="m5 12 4 4L19 6"></path></svg></span><small>Challenger</small>
+</div>
+<div class="current">
+<span>3</span><small>Contender</small>
+</div>
+<div class="">
+<span>4</span><small>Elite</small>
+</div>
+<div class="">
+<span>5</span><small>Master</small>
+</div>
+<div class="">
+<span>6</span><small>Legend</small>
+</div>
+</div>
+<div class="next-rank-preview">
+<span><svg aria-hidden="true" fill="none" height="18" viewbox="0 0 24 24" width="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><circle cx="12" cy="8" r="5"></circle><path d="m8.5 12-1 9 4.5-2 4.5 2-1-9"></path></svg></span><div>
+<small>Next rank</small><strong>Elite</strong><p>Recognized for repeated high-level placements across multiple arenas.</p>
+</div>
+<b>1,160 XP to go</b>
+</div></section>
+</div></template><script src="../js/app.js" defer></script><script src="../js/navigation.js" defer></script><script src="../js/arena.js" defer></script>
+</body>
+</html>
