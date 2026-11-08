@@ -19,34 +19,22 @@ let previouslyFocusedElement = null;
 const particleCanvas = document.getElementById("hero-particles");
 const particleContext = particleCanvas.getContext("2d");
 const reduceParticleMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-const particleHero = document.querySelector(".hero");
 let particles = [];
-let cursorParticles = [];
-let cursorBursts = [];
 let particleFrame = 0;
 let particleWidth = 0;
 let particleHeight = 0;
 let lastParticleFrame = 0;
-let lastCursorBurst = 0;
-let lastCursorPosition = null;
 
 function createParticles() {
   const width = particleWidth;
   const height = particleHeight;
   const spacing = width < 720 ? 12 : 10;
-  const clusters = [
-    { x: 0.09, y: 0.18, rx: 0.1, ry: 0.14 },
-    { x: 0.91, y: 0.2, rx: 0.1, ry: 0.15 },
-    { x: 0.08, y: 0.52, rx: 0.11, ry: 0.15 },
-    { x: 0.92, y: 0.54, rx: 0.11, ry: 0.15 },
-    { x: 0.09, y: 0.85, rx: 0.1, ry: 0.12 },
-    { x: 0.91, y: 0.87, rx: 0.1, ry: 0.12 },
-  ];
-  let seed = 41;
-  const random = () => {
-    seed = (seed * 16807) % 2147483647;
-    return (seed - 1) / 2147483646;
-  };
+  const clusters = Array.from({ length: 8 }, () => ({
+    x: 0.08 + Math.random() * 0.84,
+    y: 0.08 + Math.random() * 0.84,
+    rx: 0.055 + Math.random() * 0.035,
+    ry: 0.07 + Math.random() * 0.05,
+  }));
 
   particles = [];
   clusters.forEach((cluster, clusterIndex) => {
@@ -61,18 +49,18 @@ function createParticles() {
         const normalizedY = y / radiusY;
         const distance = Math.hypot(normalizedX, normalizedY);
         const edgeWave = Math.sin(normalizedX * 8 + Math.cos(normalizedY * 5)) * 0.12;
-        if (distance > 0.82 + edgeWave || random() < 0.08) {
+        if (distance > 0.82 + edgeWave || Math.random() < 0.08) {
           continue;
         }
 
         particles.push({
-          x: centerX + x + (random() - 0.5) * 2,
-          y: centerY + y + (random() - 0.5) * 2,
-          radius: 1 + random() * 0.7,
-          phase: random() * Math.PI * 2,
-          driftX: 9 + random() * 15,
-          driftY: 7 + random() * 13,
-          speed: 0.0007 + random() * 0.0006,
+          x: centerX + x + (Math.random() - 0.5) * 2,
+          y: centerY + y + (Math.random() - 0.5) * 2,
+          radius: 1 + Math.random() * 0.7,
+          phase: Math.random() * Math.PI * 2,
+          driftX: 9 + Math.random() * 15,
+          driftY: 7 + Math.random() * 13,
+          speed: 0.0007 + Math.random() * 0.0006,
           cluster: clusterIndex,
         });
       }
@@ -110,99 +98,12 @@ function drawParticles(time = 0) {
     particleContext.fillStyle = `rgba(235, 133, 63, ${pulse})`;
     particleContext.fill();
   });
-  cursorParticles = cursorParticles.filter((particle) => {
-    const progress = (time - particle.bornAt) / particle.lifetime;
-    if (progress >= 1) {
-      return false;
-    }
-
-    const fade = (1 - progress) ** 1.15;
-    const pop = Math.sin(Math.min(1, progress * 5) * Math.PI * 0.5);
-    particleContext.beginPath();
-    particleContext.arc(
-      particle.x + particle.velocityX * (time - particle.bornAt),
-      particle.y + particle.velocityY * (time - particle.bornAt),
-      particle.radius * (0.8 + pop * 0.55),
-      0,
-      Math.PI * 2,
-    );
-    particleContext.fillStyle = `rgba(235, 133, 63, ${fade * 0.92})`;
-    particleContext.fill();
-    return true;
-  });
-  cursorBursts = cursorBursts.filter((burst) => {
-    const progress = (time - burst.bornAt) / burst.lifetime;
-    if (progress >= 1) {
-      return false;
-    }
-
-    particleContext.beginPath();
-    particleContext.arc(burst.x, burst.y, 4 + progress * 30, 0, Math.PI * 2);
-    particleContext.strokeStyle = `rgba(235, 133, 63, ${(1 - progress) * 0.72})`;
-    particleContext.lineWidth = 1.6 * (1 - progress);
-    particleContext.stroke();
-    return true;
-  });
   particleContext.shadowBlur = 0;
 
   if (!reduceParticleMotion.matches && document.visibilityState === "visible") {
     particleFrame = window.requestAnimationFrame(drawParticles);
   }
 }
-
-function popParticlesAtCursor(event) {
-  if (
-    reduceParticleMotion.matches ||
-    event.pointerType === "touch" ||
-    event.target.closest(".hero-copy, .competition-card, .organizer-strip")
-  ) {
-    lastCursorPosition = null;
-    return;
-  }
-
-  const bounds = particleCanvas.getBoundingClientRect();
-  const position = {
-    x: event.clientX - bounds.left,
-    y: event.clientY - bounds.top,
-  };
-  const now = performance.now();
-  const distance = lastCursorPosition
-    ? Math.hypot(position.x - lastCursorPosition.x, position.y - lastCursorPosition.y)
-    : Infinity;
-
-  if (distance < 14 || now - lastCursorBurst < 45) {
-    return;
-  }
-
-  lastCursorPosition = position;
-  lastCursorBurst = now;
-  cursorBursts.push({ x: position.x, y: position.y, bornAt: now, lifetime: 620 });
-  if (cursorBursts.length > 8) {
-    cursorBursts.shift();
-  }
-  for (let index = 0; index < 16; index += 1) {
-    const angle = (Math.PI * 2 * index) / 16 + Math.random() * 0.24;
-    const speed = 0.045 + Math.random() * 0.045;
-    const startRadius = 3 + Math.random() * 12;
-    cursorParticles.push({
-      x: position.x + Math.cos(angle) * startRadius,
-      y: position.y + Math.sin(angle) * startRadius,
-      velocityX: Math.cos(angle) * speed,
-      velocityY: Math.sin(angle) * speed,
-      radius: 1.8 + Math.random() * 1.5,
-      bornAt: now,
-      lifetime: 800 + Math.random() * 350,
-    });
-  }
-  if (cursorParticles.length > 192) {
-    cursorParticles.splice(0, cursorParticles.length - 192);
-  }
-}
-
-particleHero.addEventListener("pointermove", popParticlesAtCursor);
-particleHero.addEventListener("pointerleave", () => {
-  lastCursorPosition = null;
-});
 
 function resizeParticleCanvas() {
   const bounds = particleCanvas.getBoundingClientRect();

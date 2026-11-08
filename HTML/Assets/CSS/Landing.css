@@ -81,6 +81,7 @@ input:focus-visible {
   width: fit-content;
   align-items: center;
   gap: 9px;
+  animation: nav-pop 600ms 50ms cubic-bezier(0.2, 0.75, 0.25, 1) both;
 }
 .brand > img {
   display: block;
@@ -107,6 +108,13 @@ input:focus-visible {
   font-weight: 600;
   transition: color 150ms ease;
 }
+.desktop-nav a {
+  animation: nav-pop 600ms cubic-bezier(0.2, 0.75, 0.25, 1) both;
+}
+.desktop-nav a:nth-child(1) { animation-delay: 110ms; }
+.desktop-nav a:nth-child(2) { animation-delay: 170ms; }
+.desktop-nav a:nth-child(3) { animation-delay: 230ms; }
+.desktop-nav a:nth-child(4) { animation-delay: 290ms; }
 .desktop-nav a:hover,
 .login-link:hover {
   color: var(--indigo);
@@ -117,6 +125,12 @@ input:focus-visible {
   justify-self: end;
   gap: 23px;
 }
+.nav-actions > * {
+  animation: nav-pop 600ms cubic-bezier(0.2, 0.75, 0.25, 1) both;
+}
+.nav-actions > :nth-child(1) { animation-delay: 340ms; }
+.nav-actions > :nth-child(2) { animation-delay: 400ms; }
+.nav-actions > :nth-child(3) { animation-delay: 460ms; }
 .login-link {
   padding: 8px 0;
   border: 0;
@@ -680,6 +694,16 @@ input:focus-visible {
   from {
     opacity: 0;
     transform: translateY(22px);
+  }
+  @keyframes nav-pop {
+    from {
+      opacity: 0;
+      transform: translateY(-10px) scale(0.94);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
   }
   to {
     opacity: 1;
